@@ -3,4 +3,12 @@
   <ItemGroup>
     <ClCompile Include="winmain.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Filter Include="ソースファイル">
+      <UniqueIdentifier>{481be187-ed63-4845-8c92-5f190430bf58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダファイル">
+      <UniqueIdentifier>{f1411474-5e7c-462e-b52e-44113c4ab182}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
 </Project>
