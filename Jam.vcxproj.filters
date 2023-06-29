@@ -11,4 +11,9 @@
       <UniqueIdentifier>{f1411474-5e7c-462e-b52e-44113c4ab182}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="tsuchiya.h">
+      <Filter>ヘッダファイル</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>
