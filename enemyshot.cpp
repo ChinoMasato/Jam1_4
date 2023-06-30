@@ -51,7 +51,7 @@ void updateEnemyShot()
 			{
 				//当たっている
 				player.color = enemyshot[i].color;
-				gameOverFlag = true;//ゲームオーバーフラグを立てる
+				player.hp--;
 				enemyshot[i].enable = false;
 			}
 		}

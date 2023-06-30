@@ -1,5 +1,6 @@
 #include "DxLib.h"
 #include "game.h"
+#include "player.h"
 //ゲーム関連の情報
 int score = 0;//点数
 bool gameOverFlag = false;//ゲームオーバー判定
@@ -12,7 +13,10 @@ void initGame()
 //ゲーム内容の更新
 void updateGame()
 {
-	
+	if (player.hp <= 0)
+	{
+		gameOverFlag = true;
+	}
 }
 //ゲーム情報の描画
 void drawGame()

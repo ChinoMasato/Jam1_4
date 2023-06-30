@@ -273,7 +273,6 @@ void updateEnemy()
 				//当たっている
 				player.color = enemy[i].color;
 				player.hp--;
-				gameOverFlag = true;//ゲームオーバーフラグを立てる
 			}
 
 			for (int j = 0; j < ShotNum; j++) {
