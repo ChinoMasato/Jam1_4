@@ -7,6 +7,7 @@
 #include "en.h"
 #include "game.h"
 #include "effect.h"
+#include "UI.h"
 
 void init();//初期化関数のプロトタイプ宣言
 void titleUpdate();
@@ -122,4 +123,6 @@ void draw()
 	drawEffect();
 	//ゲーム関連の描画
 	drawGame();
+
+	drawUI();
 }
