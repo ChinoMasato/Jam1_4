@@ -26,6 +26,7 @@ void initEnemy()
 	enemy[0].vx = 0.0;
 	enemy[0].vy = 1.0;
 	enemy[0].type = ENEMY1;
+	enemy[0].hp = 1;
 
 
 	//2‘Ì–Ú‚Ì“G
@@ -38,6 +39,7 @@ void initEnemy()
 	enemy[1].vx = 0.0;
 	enemy[1].vy = 1.0;
 	enemy[1].type = ENEMY4;
+	enemy[1].hp = 1;
 
 	//3‘Ì–Ú‚Ì“G
 	enemy[2].x = 300;
@@ -49,6 +51,7 @@ void initEnemy()
 	enemy[2].vx = 0.0;
 	enemy[2].vy = 1.0;
 	enemy[2].type = ENEMY3;
+	enemy[2].hp = 1;
 
 	//4‘Ì–Ú‚Ì“G
 	enemy[3].x = 300;
@@ -60,6 +63,7 @@ void initEnemy()
 	enemy[3].vx = 0.0;
 	enemy[3].vy = 1.0;
 	enemy[3].type = ENEMY4;
+	enemy[3].hp = 1;
 
 	//5‘Ì–Ú‚Ì“G
 	enemy[4].x = 300;
@@ -71,6 +75,7 @@ void initEnemy()
 	enemy[4].vx = 0.0;
 	enemy[4].vy = 1.0;
 	enemy[4].type = ENEMY4;
+	enemy[4].hp = 1;
 
 	//6‘Ì–Ú‚Ì“G
 	enemy[5].x = 300;
@@ -82,6 +87,7 @@ void initEnemy()
 	enemy[5].vx = 0.0;
 	enemy[5].vy = 1.0;
 	enemy[5].type = ENEMY4;
+	enemy[5].hp = 1;
 
 	//7‘Ì–Ú‚Ì“G
 	enemy[6].x = 300;
@@ -93,6 +99,7 @@ void initEnemy()
 	enemy[6].vx = 0.0;
 	enemy[6].vy = 1.0;
 	enemy[6].type = ENEMY4;
+	enemy[6].hp = 1;
 
 	//8‘Ì–Ú‚Ì“G
 	enemy[7].x = 300;
@@ -104,6 +111,7 @@ void initEnemy()
 	enemy[7].vx = 0.0;
 	enemy[7].vy = 1.0;
 	enemy[7].type = ENEMY4;
+	enemy[7].hp = 1;
 
 	//9‘Ì–Ú‚Ì“G
 	enemy[8].x = 300;
@@ -115,6 +123,7 @@ void initEnemy()
 	enemy[8].vx = 0.0;
 	enemy[8].vy = 1.0;
 	enemy[8].type = ENEMY4;
+	enemy[8].hp = 1;
 
 	//10‘Ì–Ú‚Ì“G
 	enemy[9].x = 300;
@@ -126,6 +135,7 @@ void initEnemy()
 	enemy[9].vx = 0.0;
 	enemy[9].vy = 1.0;
 	enemy[9].type = ENEMY5;
+	enemy[9].hp = 1;
 
 	//11‘Ì–Ú‚Ì“G
 	enemy[10].x = 300;
@@ -273,6 +283,7 @@ void updateEnemy()
 						if (enemy[10].hp == 0) {
 							enemy[i].enable = false;//“G‚ð–³Œø
 							explosion(enemy[i]);//”š”­
+
 						}
 
 					}
