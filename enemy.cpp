@@ -7,6 +7,7 @@
 #include "enemy.h"
 #include "player.h"
 #include "effect.h"
+#include "game.h"
 
 extern bool gameOverFlag;//ƒQ[ƒ€ƒI[ƒo[”»’è
 En enemy[EnemyNum];//“G
@@ -273,30 +274,19 @@ void updateEnemy()
 			for (int j = 0; j < ShotNum; j++) {
 				//“G‚Æ’e‚Æ‚Ì“–‚½‚è”»’è
 				if (shot[j].enable == true) {
-					if (isHit(shot[j], enemy[10]))
-					{
-						//“–‚½‚Á‚Ä‚¢‚é
-						shot[j].enable = false;//’e‚ğ–³Œø
-						enemy[10].hp--;
-						PlaySoundMem(explodese, DX_PLAYTYPE_BACK);
-
-						if (enemy[10].hp == 0) {
-							enemy[i].enable = false;//“G‚ğ–³Œø
-							explosion(enemy[i]);//”š”­
-
-						}
-
-					}
 					if (isHit(shot[j], enemy[i]))
 					{
 						//“–‚½‚Á‚Ä‚¢‚é
-						enemy[i].enable = false;//“G‚ğ–³Œø
 						shot[j].enable = false;//’e‚ğ–³Œø
-						PlaySoundMem(explodese, DX_PLAYTYPE_BACK);
+						enemy[i].hp--;
 
-						explosion(enemy[i]);//”š”­
+						if (enemy[i].hp == 0) {
+							score++;
+							enemy[i].enable = false;//“G‚ğ–³Œø
+							PlaySoundMem(explodese, DX_PLAYTYPE_BACK);
+							explosion(enemy[i]);//”š”­
+						}
 
-						break;
 					}
 				}
 			}
