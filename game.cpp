@@ -17,7 +17,7 @@ void updateGame()
 //ゲーム情報の描画
 void drawGame()
 {
-	DrawFormatString(0, 0, GetColor(255, 255, 0), "スコア %d 点", score);//スコアの増加量の変更はenemy.cppの敵死亡のとこで変えれます
+	DrawFormatString(0, 40, GetColor(255, 255, 0), "スコア %d 点", score);//スコアの増加量の変更はenemy.cppの敵死亡のとこで変えれます
 
 	if (gameOverFlag == true) {
 		DrawFormatString(350, 300, GetColor(255, 0, 0), "ゲームオーバー");
