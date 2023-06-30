@@ -8,6 +8,7 @@
 #include "player.h"
 #include "effect.h"
 #include "game.h"
+#include "UI.h"
 
 extern bool gameOverFlag;//ゲームオーバー判定
 En enemy[EnemyNum];//敵
@@ -150,7 +151,10 @@ void initEnemy()
 	enemy[10].type = ENEMY6;
 	enemy[10].hp = 5;
 
-
+	for (int i = 0; i < EnemyNum; i++)
+	{
+		enemy[i].shp = enemy[i].hp;
+	}//最大HPの初期化
 }
 //真っすぐ弾を撃つ
 void straightShot(int rad, En ene, int shifty)
@@ -309,8 +313,10 @@ void drawEnemy()
 	for (int i = 0; i < EnemyNum; i++) {
 		if (enemy[i].enable == true) {
 			DrawCircle(enemy[i].x, enemy[i].y, enemy[i].r, enemy[i].color, enemy[i].fill);
+			drawEHp(enemy[i]);
 		}
 	}
+	
 }
 //弾が撃てるか確認する関数
 bool canEnemyShot(En enemy)

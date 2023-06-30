@@ -32,6 +32,7 @@ struct En
 	int counter;
 	int spawnTiming;//出現タイミング
 	int hp;
+	int shp;//最大HP
 	std::map<int, MovePattern> pattern;
 
 };
