@@ -8,6 +8,7 @@
 #include "game.h"
 #include "effect.h"
 #include "UI.h"
+#include "Graph.h"
 
 void init();//初期化関数のプロトタイプ宣言
 void titleUpdate();
@@ -21,8 +22,6 @@ enum GameScene
 	Result
 };
 GameScene scene = Title;
-int TitleLogo;
-int PushEnterKey;
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
@@ -69,11 +68,10 @@ void init()
 	initEnemyShot();
 	//敵の初期化処理
 	initEnemy();
+	//画像関連の初期化処理
+	initGraph();
 	//エフェクトの初期化
 	initEffect();
-	//タイトル画像読み込み
-	TitleLogo = LoadGraph("title.png");
-	PushEnterKey = LoadGraph("pushenter.png");
 	//タイトルBGM再生
 	PlayMusic("maou_game_boss03.mp3", DX_PLAYTYPE_LOOP);
 }
@@ -103,7 +101,9 @@ void update()
 	//敵の更新
 	updateEnemy();
 	//エフェクトの更新
-	updateEffect();
+	updateEffect(); 
+	//画像関連の更新
+	updateGraph();
 
 	//描画処理
 	draw();
