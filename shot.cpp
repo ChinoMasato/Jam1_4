@@ -28,7 +28,12 @@ void updateShot()
 			if (shot[i].x >= 600) {
 				shot[i].enable = false;
 			}
+			if (shot[i].y < 0)
+			{
+				shot[i].enable = false;
+			}
 		}
+		
 	}
 }
 //’e‚Ì•`‰æ
