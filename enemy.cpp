@@ -24,7 +24,7 @@ void initEnemy()
 	enemy[0].fill = true;
 	enemy[0].enable = true;
 	enemy[0].vx = 0.0;
-	enemy[0].vy = 2.0;
+	enemy[0].vy = 1.0;
 	enemy[0].type = ENEMY1;
 
 
@@ -36,7 +36,7 @@ void initEnemy()
 	enemy[1].fill = true;
 	enemy[1].enable = true;
 	enemy[1].vx = 0.0;
-	enemy[1].vy = 2.0;
+	enemy[1].vy = 1.0;
 	enemy[1].type = ENEMY4;
 
 	//3�̖ڂ̓G
@@ -47,7 +47,7 @@ void initEnemy()
 	enemy[2].fill = true;
 	enemy[2].enable = true;
 	enemy[2].vx = 0.0;
-	enemy[2].vy = 2.0;
+	enemy[2].vy = 1.0;
 	enemy[2].type = ENEMY3;
 
 	//4�̖ڂ̓G
@@ -58,7 +58,7 @@ void initEnemy()
 	enemy[3].fill = true;
 	enemy[3].enable = true;
 	enemy[3].vx = 0.0;
-	enemy[3].vy = 2.0;
+	enemy[3].vy = 1.0;
 	enemy[3].type = ENEMY4;
 
 	//5�̖ڂ̓G
@@ -69,73 +69,73 @@ void initEnemy()
 	enemy[4].fill = true;
 	enemy[4].enable = true;
 	enemy[4].vx = 0.0;
-	enemy[4].vy = 2.0;
+	enemy[4].vy = 1.0;
 	enemy[4].type = ENEMY4;
 
 	//6�̖ڂ̓G
 	enemy[5].x = 300;
 	enemy[5].y = -3400;
-	enemy[5].r = 30;
+	enemy[5].r = 10;
 	enemy[5].color = GetColor(255, 0, 0);
 	enemy[5].fill = true;
 	enemy[5].enable = true;
 	enemy[5].vx = 0.0;
-	enemy[5].vy = 2.0;
+	enemy[5].vy = 1.0;
 	enemy[5].type = ENEMY4;
 
 	//7�̖ڂ̓G
 	enemy[6].x = 300;
 	enemy[6].y = -4000;
-	enemy[6].r = 30;
+	enemy[6].r = 10;
 	enemy[6].color = GetColor(255, 0, 0);
 	enemy[6].fill = true;
 	enemy[6].enable = true;
 	enemy[6].vx = 0.0;
-	enemy[6].vy = 2.0;
+	enemy[6].vy = 1.0;
 	enemy[6].type = ENEMY4;
 
 	//8�̖ڂ̓G
 	enemy[7].x = 300;
 	enemy[7].y = -4200;
-	enemy[7].r = 30;
+	enemy[7].r = 10;
 	enemy[7].color = GetColor(255, 0, 0);
 	enemy[7].fill = true;
 	enemy[7].enable = true;
 	enemy[7].vx = 0.0;
-	enemy[7].vy = 2.0;
+	enemy[7].vy = 1.0;
 	enemy[7].type = ENEMY4;
 
 	//9�̖ڂ̓G
 	enemy[8].x = 300;
 	enemy[8].y = -5000;
-	enemy[8].r = 30;
+	enemy[8].r = 10;
 	enemy[8].color = GetColor(255, 0, 0);
 	enemy[8].fill = true;
 	enemy[8].enable = true;
 	enemy[8].vx = 0.0;
-	enemy[8].vy = 2.0;
+	enemy[8].vy = 1.0;
 	enemy[8].type = ENEMY4;
 
 	//10�̖ڂ̓G
 	enemy[9].x = 300;
 	enemy[9].y = -5500;
-	enemy[9].r = 30;
+	enemy[9].r = 10;
 	enemy[9].color = GetColor(255, 0, 0);
 	enemy[9].fill = true;
 	enemy[9].enable = true;
 	enemy[9].vx = 0.0;
-	enemy[9].vy = 2.0;
+	enemy[9].vy = 1.0;
 	enemy[9].type = ENEMY5;
 
 	//11�̖ڂ̓G
-	enemy[10].x = 500;
+	enemy[10].x = 300;
 	enemy[10].y = -7500;
-	enemy[10].r = 30;
-	enemy[10].color = GetColor(255, 0, 0);
+	enemy[10].r = 50;
+	enemy[10].color = GetColor(255, 255, 0);
 	enemy[10].fill = true;
 	enemy[10].enable = true;
 	enemy[10].vx = 0.0;
-	enemy[10].vy = 2.0;
+	enemy[10].vy = 1.0;
 	enemy[10].type = ENEMY6;
 	enemy[10].hp = 5;
 
