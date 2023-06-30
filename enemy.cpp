@@ -52,7 +52,7 @@ void initEnemy()
 
 	//4体目の敵
 	enemy[3].x = 300;
-	enemy[3].y = 2400;
+	enemy[3].y = -2400;
 	enemy[3].r = 30;
 	enemy[3].color = GetColor(255, 0, 0);
 	enemy[3].fill = true;
@@ -74,7 +74,7 @@ void initEnemy()
 
 	//6体目の敵
 	enemy[5].x = 300;
-	enemy[5].y = 3400;
+	enemy[5].y = -3400;
 	enemy[5].r = 30;
 	enemy[5].color = GetColor(255, 0, 0);
 	enemy[5].fill = true;
@@ -96,7 +96,7 @@ void initEnemy()
 
 	//8体目の敵
 	enemy[7].x = 300;
-	enemy[7].y = 4200;
+	enemy[7].y = -4200;
 	enemy[7].r = 30;
 	enemy[7].color = GetColor(255, 0, 0);
 	enemy[7].fill = true;
@@ -179,7 +179,7 @@ void aimShot(En ene)
 			enemyshot[j].x = ene.x;
 			enemyshot[j].y = ene.y;
 
-			double speed = 3.0;//速度
+			double speed = 2.0;//速度
 			double dx = player.x - ene.x;//プレイヤーと敵のx方向の距離
 			double dy = player.y - ene.y;//プレイヤーと敵のy方向の距離
 			double d = sqrt(dx * dx + dy * dy);//敵とプレイヤーとの距離
