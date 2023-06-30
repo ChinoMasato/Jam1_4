@@ -22,19 +22,19 @@ void initPlayer()
 void updatePlayer()
 {
 	//プレイヤーを動かす
-	if ((CheckHitKey(KEY_INPUT_RIGHT) == 1)|| CheckHitKey(KEY_INPUT_D)==1)
+	if (CheckHitKey(KEY_INPUT_RIGHT) == 1|| CheckHitKey(KEY_INPUT_D)==1)
 	{
 		player.x = player.x + 3.0;
 	}
-	if (CheckHitKey(KEY_INPUT_LEFT) == 1)
+	if (CheckHitKey(KEY_INPUT_LEFT) == 1 || CheckHitKey(KEY_INPUT_A) == 1)
 	{
 		player.x = player.x - 3.0;
 	}
-	if (CheckHitKey(KEY_INPUT_UP) == 1)
+	if (CheckHitKey(KEY_INPUT_UP) == 1 || CheckHitKey(KEY_INPUT_W) == 1)
 	{
 		player.y = player.y - 3.0;
 	}
-	if (CheckHitKey(KEY_INPUT_DOWN) == 1)
+	if (CheckHitKey(KEY_INPUT_DOWN) == 1 || CheckHitKey(KEY_INPUT_S) == 1)
 	{
 		player.y = player.y + 3.0;
 	}
@@ -56,7 +56,7 @@ void updatePlayer()
 	}
 
 	//弾を撃つ処理
-	if (CheckHitKey(KEY_INPUT_Z) == 1 &&
+	if ((CheckHitKey(KEY_INPUT_Z) == 1|| CheckHitKey(KEY_INPUT_SPACE)) &&
 		player.cooltime <= 0)
 	{
 		//弾が無効なときのみ初期値をセットし有効にする
