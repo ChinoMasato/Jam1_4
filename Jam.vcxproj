@@ -86,9 +86,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="bgsprite.cpp" />
+    <ClCompile Include="effect.cpp" />
+    <ClCompile Include="en.cpp" />
+    <ClCompile Include="enemy.cpp" />
+    <ClCompile Include="enemyshot.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="player.cpp" />
+    <ClCompile Include="shot.cpp" />
     <ClCompile Include="winmain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="bgsprite.h" />
+    <ClInclude Include="effect.h" />
+    <ClInclude Include="en.h" />
+    <ClInclude Include="enemy.h" />
+    <ClInclude Include="enemyshot.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="player.h" />
+    <ClInclude Include="shot.h" />
     <ClInclude Include="tsuchiya.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
