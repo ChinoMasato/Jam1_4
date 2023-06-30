@@ -22,7 +22,7 @@ void initPlayer()
 void updatePlayer()
 {
 	//ƒvƒŒƒCƒ„[‚ğ“®‚©‚·
-	if (CheckHitKey(KEY_INPUT_RIGHT) == 1)
+	if ((CheckHitKey(KEY_INPUT_RIGHT) == 1)|| CheckHitKey(KEY_INPUT_D)==1)
 	{
 		player.x = player.x + 3.0;
 	}
