@@ -47,12 +47,16 @@ void updateEnemyShot()
 			{
 				enemyshot[i].enable = false;
 			}
-			if (isHit(player, enemyshot[i]))
+			if (player.star <= 0)
 			{
-				//“–‚½‚Á‚Ä‚¢‚é
-				player.color = enemyshot[i].color;
-				player.hp--;
-				enemyshot[i].enable = false;
+				if (isHit(player, enemyshot[i]))
+				{
+					//“–‚½‚Á‚Ä‚¢‚é
+					player.color = enemyshot[i].color;
+					player.hp--;
+					player.star = 300;
+					enemyshot[i].enable = false;
+				}
 			}
 		}
 	}

@@ -268,11 +268,15 @@ void updateEnemy()
 				enemy[i].cooltime = 30;
 			}
 
-			if (isHit(player, enemy[i]))
+			if (player.star <= 0) 
 			{
-				//“–‚½‚Á‚Ä‚¢‚é
-				player.color = enemy[i].color;
-				player.hp--;
+				if (isHit(player, enemy[i]))
+				{
+					//“–‚½‚Á‚Ä‚¢‚é
+					player.color = enemy[i].color;
+					player.hp--;
+					player.star = 300;
+				}
 			}
 
 			for (int j = 0; j < ShotNum; j++) {
