@@ -3,15 +3,15 @@
 int bgimg0;//îwåiéËëOâÊëú
 int bgimg1;//îwåiâÊëú
 int bgimg2;//îwåiâÊëú2
-double scrollY1 = 0.0;
-double scrollY2 = 800.0;
-double scrollY3 = 0.0;
-double scrollY4 = 800.0;
+double scrollY1 = -1000.0;
+double scrollY2 = -1000.0;
+double scrollY3 = -1000.0;
+double scrollY4 = -1000.0;
 void initBg()
 {
-	bgimg0 = LoadGraph("BG0.png");
-	bgimg1 = LoadGraph("BG1.png");
-	bgimg2 = LoadGraph("BG2.png");
+	bgimg0 = LoadGraph("haikei.jpg");
+	bgimg1 = LoadGraph("haikei.jpg");
+	bgimg2 = LoadGraph("haikei.jpg");
 
 }
 double scroll(double y, double speed)
@@ -27,17 +27,17 @@ double scroll(double y, double speed)
 void updateBg()
 {
 	//ÉXÉNÉçÅ[Éã
-	scrollY1 = scroll(scrollY1, 0.2);
-	scrollY2 = scroll(scrollY2, 0.2);
+	scrollY1 = scroll(scrollY1, 50);
+	scrollY2 = scroll(scrollY2, 50);
 
-	scrollY3 = scroll(scrollY3, 1.0);
-	scrollY4 = scroll(scrollY4, 1.0);
+	scrollY3 = scroll(scrollY3, 50);
+	scrollY4 = scroll(scrollY4, 50);
 }
 void drawBg()
 {
-	DrawGraph(scrollY1, 0, bgimg1, true);
-	DrawGraph(scrollY2, 0, bgimg2, true);
+	DrawGraph(300, scrollY1, bgimg1, true);
+	DrawGraph(300, scrollY2, bgimg2, true);
 
-	DrawGraph(scrollY3, 0, bgimg0, true);
-	DrawGraph(scrollY4, 0, bgimg0, true);
+	DrawGraph(300, scrollY3, bgimg0, true);
+	DrawGraph(300, scrollY4, bgimg0, true);
 }
