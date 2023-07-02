@@ -100,7 +100,7 @@ void initEnemy()
 	//6�̖ڂ̓G
 	enemy[5].x = 300;
 	enemy[5].y = -3400;
-	enemy[5].r = 10;
+	enemy[5].r = 30;
 	enemy[5].color = GetColor(255, 0, 0);
 	enemy[5].fill = true;
 	enemy[5].enable = true;
@@ -112,7 +112,7 @@ void initEnemy()
 	//7�̖ڂ̓G
 	enemy[6].x = 300;
 	enemy[6].y = -4000;
-	enemy[6].r = 10;
+	enemy[6].r = 30;
 	enemy[6].color = GetColor(255, 0, 0);
 	enemy[6].fill = true;
 	enemy[6].enable = true;
@@ -124,7 +124,7 @@ void initEnemy()
 	//8�̖ڂ̓G
 	enemy[7].x = 300;
 	enemy[7].y = -4200;
-	enemy[7].r = 10;
+	enemy[7].r = 30;
 	enemy[7].color = GetColor(255, 0, 0);
 	enemy[7].fill = true;
 	enemy[7].enable = true;
@@ -136,7 +136,7 @@ void initEnemy()
 	//9�̖ڂ̓G
 	enemy[8].x = 300;
 	enemy[8].y = -5000;
-	enemy[8].r = 10;
+	enemy[8].r = 30;
 	enemy[8].color = GetColor(255, 0, 0);
 	enemy[8].fill = true;
 	enemy[8].enable = true;
@@ -148,7 +148,7 @@ void initEnemy()
 	//10�̖ڂ̓G
 	enemy[9].x = 300;
 	enemy[9].y = -5500;
-	enemy[9].r = 10;
+	enemy[9].r = 30;
 	enemy[9].color = GetColor(255, 0, 0);
 	enemy[9].fill = true;
 	enemy[9].enable = true;
@@ -281,6 +281,8 @@ void updateEnemy()
 				}
 				if (enemy[i].type == ENEMY6) {
 					straightShot(90, enemy[i], 0);
+					straightShot(85, enemy[i], 0);
+					straightShot(95, enemy[i], 0);
 				}
 
 				enemy[i].cooltime = 30;

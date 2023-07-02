@@ -40,6 +40,17 @@ void updateEnemyShot()
 			}
 			enemyshot[i].x = enemyshot[i].x + enemyshot[i].vx;
 			enemyshot[i].y = enemyshot[i].y + enemyshot[i].vy;
+			if (enemyshot[i].type == ENEMY6) {
+				if (isRight(enemyshot[i], player))
+				{
+					RotVec(enemyshot[i], 0.2);//‰E‚É1“x‰ñ“]
+				}
+				else {
+					RotVec(enemyshot[i], -0.2);//¶‚É1“x‰ñ“]
+				}
+			}
+			enemyshot[i].x = enemyshot[i].x + enemyshot[i].vx;
+			enemyshot[i].y = enemyshot[i].y + enemyshot[i].vy;
 			if (enemyshot[i].x >= 600 ||
 				enemyshot[i].x < 0 ||
 				enemyshot[i].y >= 1000 ||
