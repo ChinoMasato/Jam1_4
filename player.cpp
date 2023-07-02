@@ -6,11 +6,15 @@
 
 En player;//プレイヤー
 int shotse;//ショットSE
+int lasershotse;//レーザー攻撃SE
+
 int playerimg;
 //プレイヤーの初期化
 void initPlayer()
 {
-	shotse = LoadSoundMem("maou_se_battle16.mp3");
+	shotse = LoadSoundMem("ショット7.mp3");
+	lasershotse = LoadSoundMem("エネルギーを発射.mp3");
+
 	playerimg = LoadGraph("jiki.png");
 	player.x = 300;
 	player.y = 1000;

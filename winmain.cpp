@@ -15,6 +15,8 @@ void titleUpdate();
 void update();//更新関数のプロトタイプ宣言
 void draw();//描画処理
 
+int gamestartse;
+
 enum GameScene
 {
 	Title,
@@ -59,6 +61,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 //初期化関数　引数、戻り値なし
 void init()
 {
+
 	//ゲームの初期化
 	initGame();
 	//プレイヤーの初期化
@@ -73,7 +76,8 @@ void init()
 	//エフェクトの初期化
 	initEffect();
 	//タイトルBGM再生
-	PlayMusic("maou_game_boss03.mp3", DX_PLAYTYPE_LOOP);
+	PlayMusic("Short_SF_13.mp3", DX_PLAYTYPE_LOOP);
+	gamestartse = LoadSoundMem("完了6。mp3");
 }
 //タイトルシーンの更新
 void titleUpdate()
@@ -81,7 +85,7 @@ void titleUpdate()
 	if (CheckHitKey(KEY_INPUT_RETURN) == 1)
 	{
 		scene = Game;
-		PlayMusic("maou_game_vehicle03.mp3", DX_PLAYTYPE_LOOP);
+		PlayMusic("Shooting_01.mp3", DX_PLAYTYPE_LOOP);
 	}
 	DrawGraph(0, 300, TitleLogo, true);
 	DrawGraph(180, 380, PushEnterKey, true);
