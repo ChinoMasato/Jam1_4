@@ -6,10 +6,12 @@
 
 En player;//プレイヤー
 int shotse;//ショットSE
+int playerimg;
 //プレイヤーの初期化
 void initPlayer()
 {
 	shotse = LoadSoundMem("maou_se_battle16.mp3");
+	playerimg = LoadGraph("jiki.png");
 	player.x = 300;
 	player.y = 1000;
 	player.r = 10;
@@ -67,8 +69,8 @@ void updatePlayer()
 			//撃てる弾をみつける
 			if (shot[i].enable == false) {
 				//弾を撃つ
-				shot[i].x = player.x;
-				shot[i].y = player.y;
+				shot[i].x = player.x + 1;
+				shot[i].y = player.y - 50;
 				shot[i].enable = true;
 				player.cooltime = 30;//連射速度　小さいほど連射できる
 				PlaySoundMem(shotse, DX_PLAYTYPE_BACK);
@@ -89,7 +91,7 @@ void drawPlayer()
 	if (player.star > 0) {
 		SetDrawBlendMode(DX_BLENDMODE_ALPHA, 152);
 	}
-	DrawCircle(player.x, player.y, player.r, player.color, player.fill);
+	DrawGraph(player.x - 50, player.y - 70, playerimg, true);
 	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 152);
 		
 	
