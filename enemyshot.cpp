@@ -43,10 +43,10 @@ void updateEnemyShot()
 			if (enemyshot[i].type == ENEMY6) {
 				if (isRight(enemyshot[i], player))
 				{
-					RotVec(enemyshot[i], 0.2);//右に1度回転
+					RotVec(enemyshot[i], 0.8);//右に1度回転
 				}
 				else {
-					RotVec(enemyshot[i], -0.2);//左に1度回転
+					RotVec(enemyshot[i], -0.8);//左に1度回転
 				}
 			}
 			enemyshot[i].x = enemyshot[i].x + enemyshot[i].vx;

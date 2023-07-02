@@ -220,8 +220,8 @@ void aimShot(En ene)
 			enemyshot[j].vy = speed * (dy / d);//y‚ÌˆÚ“®—Ê
 			enemyshot[j].enable = true;
 			enemyshot[j].type = ene.type;
-			enemyshot[j].vvx = enemyshot[j].vx * 0.01;
-			enemyshot[j].vvy = enemyshot[j].vy * 0.01;
+			enemyshot[j].vvx = enemyshot[j].vx * 0.05;
+			enemyshot[j].vvy = enemyshot[j].vy * 0.05;
 			break;
 		}
 	}
@@ -283,6 +283,8 @@ void updateEnemy()
 					straightShot(90, enemy[i], 0);
 					straightShot(85, enemy[i], 0);
 					straightShot(95, enemy[i], 0);
+					straightShot(80, enemy[i], 0);
+					straightShot(100, enemy[i], 0);
 				}
 
 				enemy[i].cooltime = 30;
