@@ -14,9 +14,13 @@ extern bool gameOverFlag;//ƒQ[ƒ€ƒI[ƒo[”»’è
 En enemy[EnemyNum];//“G
 
 int explodese;//”š”­SE
+int enemyimg;
+int bossimg;
 //“G‚Ì‰Šú‰»
 void initEnemy()
 {
+	enemyimg = LoadGraph("mob.png");
+	bossimg = LoadGraph("boss.png");
 	explodese = LoadSoundMem("maou_se_battle_explosion06.mp3");
 	//1‘Ì–Ú‚Ì“G
 	enemy[0].x = 300;
@@ -142,7 +146,7 @@ void initEnemy()
 	//11‘Ì–Ú‚Ì“G
 	enemy[10].x = 300;
 	enemy[10].y = -7500;
-	enemy[10].r = 50;
+	enemy[10].r = 100;
 	enemy[10].color = GetColor(255, 255, 0);
 	enemy[10].fill = true;
 	enemy[10].enable = true;
@@ -313,11 +317,17 @@ void updateEnemy()
 //“G‚Ì•`‰æ
 void drawEnemy()
 {
-	for (int i = 0; i < EnemyNum; i++) {
+	for (int i = 0; i < 10; i++) {
 		if (enemy[i].enable == true) {
-			DrawCircle(enemy[i].x, enemy[i].y, enemy[i].r, enemy[i].color, enemy[i].fill);
+			DrawGraph(enemy[i].x - 25, enemy[i].y - 27, enemyimg, true);
+			//DrawCircle(enemy[i].x, enemy[i].y, enemy[i].r, enemy[i].color, enemy[i].fill);
 			drawEHp(enemy[i]);
 		}
+	}
+	if (enemy[10].enable == true) {
+		DrawGraph(enemy[10].x - 100, enemy[10].y - 88, bossimg, true);
+		//DrawCircle(enemy[i].x, enemy[i].y, enemy[i].r, enemy[i].color, enemy[i].fill);
+		drawEHp(enemy[10]);
 	}
 	
 }

@@ -2,6 +2,8 @@
 #include "en.h"
 const int EnemyNum = 30;//“G‚Ì”
 extern En enemy[EnemyNum];//“G
+extern int enemyimg;
+extern int bossimg;
 
 void initEnemy();//“G‚Ì‰Šú‰»
 void updateEnemy();//“G‚ÌXV
