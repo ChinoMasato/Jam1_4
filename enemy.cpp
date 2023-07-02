@@ -16,21 +16,19 @@ En enemy[EnemyNum];//敵
 int explodese;//爆発SE
 
 int enemytenshotse;//敵ショットSE
-int enemydebtse;//敵死SE
+int bossse;//ボス出現SE
 int gameOverse;//ゲームオーバーSE
 int gameclearse;//ゲームクリアSE
-int bossse;//ボス出現SE
 
 int enemyimg;
 int bossimg;
 //敵の初期化
 void initEnemy()
 {
-
+	explodese = LoadSoundMem("爆発2,mp3");
 	gameOverse = LoadSoundMem("maou_se_8bit12.mp3");
 	gameclearse = LoadSoundMem("maou_se_jingle05.mp3");
 	enemytenshotse = LoadSoundMem("maou_se_battle_gun04.mp3");
-	enemydebtse = LoadSoundMem("maou_se_battle_explosion06.mp3");
 	bossse = LoadSoundMem("警報2.mp3");
 
 	enemyimg = LoadGraph("mob.png");
@@ -286,7 +284,7 @@ void updateEnemy()
 				enemy[i].cooltime = 30;
 			}
 
-
+			//ボス出現SE
 			if (enemy[10].x == 800)
 			{
 				PlaySoundMem(bossse, DX_PLAYTYPE_BACK);
