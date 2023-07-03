@@ -91,9 +91,9 @@ void updatePlayer()
 //ƒvƒŒƒCƒ„[‚Ì•`‰æ
 void drawPlayer()
 {
-	//if (player.star > 0) {
-	//	SetDrawBlendMode(DX_BLENDMODE_ALPHA, 152);
-	//}
+	if (player.star > 0) {
+		SetDrawBlendMode(DX_BLENDMODE_ALPHA, 152);
+	}
 	DrawGraph(player.x - 50, player.y - 70, playerimg, true);
 	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 152);
 		

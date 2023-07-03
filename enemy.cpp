@@ -255,6 +255,7 @@ void initEnemy()
 	enemy[18].vx = 0.0;
 	enemy[18].vy = 1.0;
 	enemy[18].type = ENEMY5;
+	enemy[18].hp = 1;
 
 	enemy[19].x = 300;
 	enemy[19].y = -8000;
@@ -276,6 +277,7 @@ void initEnemy()
 	enemy[20].vx = 0.0;
 	enemy[20].vy = 1.0;
 	enemy[20].type = ENEMY5;
+	enemy[20].hp = 1;
 
 	enemy[21].x = 400;
 	enemy[21].y = -8300;
