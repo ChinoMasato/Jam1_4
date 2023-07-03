@@ -33,7 +33,7 @@ void initEnemy()
 
 	enemyimg = LoadGraph("mob.png");
 	bossimg = LoadGraph("boss.png");
-	explodese = LoadSoundMem("maou_se_battle_explosion06.mp3");
+
 	//1�̖ڂ̓G
 	enemy[0].x = 100;
 	enemy[0].y = -1100;
