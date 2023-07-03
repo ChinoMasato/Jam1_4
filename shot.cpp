@@ -4,9 +4,11 @@
 #include "shot.h"
 
 En shot[ShotNum];//’e
+int shotimg;
 //’e‚Ì‰Šú‰»
 void initShot()
 {
+	shotimg = LoadGraph("shotimg.png");
 	for (int i = 0; i < ShotNum; i++) {
 		shot[i].r = 5;
 		shot[i].color = GetColor(255, 255, 0);
@@ -43,9 +45,9 @@ void drawShot()
 		if (shot[i].enable == true)
 		{
 			SetDrawBlendMode(DX_BLENDMODE_ALPHA, 127);//”¼“§–¾
-			DrawCircle(shot[i].x, shot[i].y, shot[i].r, shot[i].color, shot[i].fill);
-			SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);//•s“§–¾
-			DrawCircle(shot[i].x, shot[i].y, shot[i].r * 0.5, shot[i].color, shot[i].fill);
+			DrawGraph(shot[i].x, shot[i].y, shotimg,true);
+			//SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);//•s“§–¾
+			//DrawCircle(shot[i].x, shot[i].y, shot[i].r * 0.5, shot[i].color, shot[i].fill);
 
 		}
 	}
