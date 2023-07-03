@@ -6,7 +6,7 @@ int damege = 150;
 void drawUI()
 {
 	count++;
-	if (player.hp * 15 < damege) {
+	if (player.hp * 15 < damege && count % 5 == 0) {
 		damege--;
 	}
 	if (count % 10 > 5) {
