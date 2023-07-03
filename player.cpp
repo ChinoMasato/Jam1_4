@@ -23,7 +23,6 @@ void initPlayer()
 	player.fill = true;
 	player.cooltime = 0;
 	player.hp = 10;
-	player.star = 0;
 }
 
 //プレイヤーの更新
