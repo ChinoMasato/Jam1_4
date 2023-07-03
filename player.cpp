@@ -72,6 +72,8 @@ void updatePlayer()
 		//弾が無効なときのみ初期値をセットし有効にする
 		for (int i = 0; i < ShotNum; i++)
 		{
+			shot[i].vx = 0.0;
+			shot[i].vy = -5.0;
 			//撃てる弾をみつける
 			if (shot[i].enable == false) {
 				//弾を撃つ
