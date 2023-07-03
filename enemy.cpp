@@ -460,8 +460,9 @@ void updateEnemy()
 					player.color = enemy[i].color;
 					player.hp--;
 					player.star = 300;
+					PlaySoundMem(gameOverse, DX_PLAYTYPE_BACK);
 				}
-				PlaySoundMem(gameOverse, DX_PLAYTYPE_BACK);
+				
 			}
 
 			for (int j = 0; j < ShotNum; j++) {
