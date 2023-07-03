@@ -525,7 +525,21 @@ void drawEnemy()
 	}
 	if (enemy[10].enable == true) {
 
+		SetDrawBlendMode(DX_BLENDMODE_INVSRC, 255); //îΩì]çáê¨ 
+		//Drawä÷êî 
+		SetDrawBlendMode(DX_BLENDMODE_ADD, 255); //â¡éZçáê¨ 
+		//Drawä÷êîÇ≈è„Ç∆ìØÇ∂ï®ÇèdÇÀÇÈ 
+		SetDrawBlendMode(DX_BLENDMODE_INVSRC, 155); //îΩì]çáê¨ 
+		//Drawä÷êî 
+		SetDrawBlendMode(DX_BLENDMODE_ADD, 155); //â¡éZçáê¨ 
+
+		SetDrawBlendMode(DX_BLENDMODE_INVSRC, 55); //îΩì]çáê¨ 
+		//Drawä÷êî 
+		SetDrawBlendMode(DX_BLENDMODE_ADD, 55); //â¡éZçáê¨ 
+
+
 		DrawGraph(enemy[10].x - 100, enemy[10].y - 88, bossimg, true);	
+		SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 255);
 		//DrawCircle(enemy[i].x, enemy[i].y, enemy[i].r, enemy[i].color, enemy[i].fill);
 		drawEHp(enemy[10]);
 	}
