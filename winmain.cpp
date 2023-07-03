@@ -91,6 +91,7 @@ void titleUpdate()
 	}
 	DrawGraph(0, 300, TitleLogo, true);
 	//DrawGraph(180, 380, PushEnterKey, true);
+	DrawGraph(-300, 100, TitleLogo, true);
 }
 
 //更新関数

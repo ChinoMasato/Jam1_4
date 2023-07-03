@@ -17,6 +17,7 @@ void updateGame()
 	{
 		gameOverFlag = true;
 		scene = Gameover;
+		PlayMusic("", DX_PLAYTYPE_LOOP);
 	}
 }
 //ƒQ[ƒ€î•ñ‚Ì•`‰æ
