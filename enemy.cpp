@@ -14,6 +14,7 @@ extern bool gameOverFlag;//ゲームオーバー判定
 En enemy[EnemyNum];//敵
 
 int explodese;//爆発SE
+int explode1se;//爆発SE
 
 int enemytenshotse;//敵ショットSE
 int bossse;//ボス出現SE
@@ -21,19 +22,22 @@ int gameOverse;//ゲームオーバーSE
 int gameclearse;//ゲームクリアSE
 
 int enemyimg;
+int enemyimg2;
 int bossimg;
 //敵の初期化
 void initEnemy()
 {
-	explodese = LoadSoundMem("爆発2,mp3");
+	explodese = LoadSoundMem("爆発2 (1).mp3");
+	explode1se = LoadSoundMem("爆発4.mp3");
 	gameOverse = LoadSoundMem("tomoshibi.mp3");
-	gameclearse = LoadSoundMem("maou_se_jingle05.mp3");
+	gameclearse = LoadSoundMem("victory.mp3");
 	enemytenshotse = LoadSoundMem("火炎魔法1.mp3");
 	bossse = LoadSoundMem("警報2.mp3");
 
 	enemyimg = LoadGraph("mob.png");
+	enemyimg2 = LoadGraph("mob2.png");
 	bossimg = LoadGraph("boss.png");
-	explodese = LoadSoundMem("maou_se_battle_explosion06.mp3");
+
 	//1体目の敵
 	enemy[0].x = 100;
 	enemy[0].y = -1100;
@@ -470,20 +474,21 @@ void updateEnemy()
 						shot[j].enable = false;//弾を無効
 						enemy[i].hp--;
 
-						
+						//敵死亡
+						if (enemy[i].hp == 0)
+						{
+							
+							
+							//スコアの増加量を変えるならここ
+							score+=1;
+							enemy[i].enable = false;//敵を無効
+							PlaySoundMem(explodese, DX_PLAYTYPE_BACK);
+							PlaySoundMem(explode1se, DX_PLAYTYPE_BACK);
+							explosion(enemy[i]);//爆発
+							A_light(enemy[i]);
+						}
 
 					}
-				}
-				//敵死亡
-				if (enemy[i].hp == 0)
-				{
-
-					//スコアの増加量を変えるならここ
-					score += 1;
-					enemy[i].enable = false;//敵を無効
-					PlaySoundMem(explodese, DX_PLAYTYPE_BACK);
-					explosion(enemy[i]);//爆発
-					A_light(enemy[i]);
 				}
 			}
 			//銃を冷やす処理
@@ -520,6 +525,13 @@ void drawEnemy()
 	for (int i = 0; i < EnemyNum; i++) {
 		if (enemy[i].enable == true) {
 			DrawGraph(enemy[i].x - 25, enemy[i].y - 27, enemyimg, true);
+			//DrawCircle(enemy[i].x, enemy[i].y, enemy[i].r, enemy[i].color, enemy[i].fill);
+			drawEHp(enemy[i]);
+		}
+	}
+	for(int i = 0; i < EnemyNum; i++ ){
+		if (enemy[i].enable == true && enemy[i].type == ENEMY3) {
+			DrawGraph(enemy[i].x - 50, enemy[i].y - 44, enemyimg2, true);
 			//DrawCircle(enemy[i].x, enemy[i].y, enemy[i].r, enemy[i].color, enemy[i].fill);
 			drawEHp(enemy[i]);
 		}
