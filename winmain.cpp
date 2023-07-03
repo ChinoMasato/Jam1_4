@@ -91,7 +91,6 @@ void titleUpdate()
 		PlayMusic("Shooting_01.mp3", DX_PLAYTYPE_LOOP);
 		PlaySoundMem(gamestartse, DX_PLAYTYPE_BACK);
 	}
-	DrawGraph(0, 300, TitleLogo, true);
 	//DrawGraph(180, 380, PushEnterKey, true);
 	DrawGraph(-300, 100, TitleLogo, true);
 }
