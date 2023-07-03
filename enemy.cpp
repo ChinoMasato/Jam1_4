@@ -157,7 +157,7 @@ void initEnemy()
 
 	//11�̖ڂ̓G
 	enemy[10].x = 300;
-	enemy[10].y = -1000;
+	enemy[10].y = -10000;
 	enemy[10].r = 100;
 	enemy[10].color = GetColor(255, 255, 0);
 	enemy[10].fill = true;
