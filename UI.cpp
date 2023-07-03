@@ -14,6 +14,7 @@ void drawUI()
 	}
 	DrawBox(0, 0, player.hp * 5, 20, GetColor(50, 50, 255), TRUE);
 	DrawBox(0, 0, 150, 20, GetColor(255, 255, 255), FALSE);
+	DrawFormatString(200, 20, GetColor(255, 255, 255), "wasd –îˆóƒL[‚Å‘€ì@space z ‚ÅËŒ‚");
 }
 void drawEHp(En en1)
 {
