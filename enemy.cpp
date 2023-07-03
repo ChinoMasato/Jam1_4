@@ -470,19 +470,20 @@ void updateEnemy()
 						shot[j].enable = false;//’e‚ğ–³Œø
 						enemy[i].hp--;
 
-						//“G€–S
-						if (enemy[i].hp == 0)
-						{
-
-							//ƒXƒRƒA‚Ì‘‰Á—Ê‚ğ•Ï‚¦‚é‚È‚ç‚±‚±
-							score+=1;
-							enemy[i].enable = false;//“G‚ğ–³Œø
-							PlaySoundMem(explodese, DX_PLAYTYPE_BACK);
-							explosion(enemy[i]);//”š”­
-							A_light(enemy[i]);
-						}
+						
 
 					}
+				}
+				//“G€–S
+				if (enemy[i].hp == 0)
+				{
+
+					//ƒXƒRƒA‚Ì‘‰Á—Ê‚ğ•Ï‚¦‚é‚È‚ç‚±‚±
+					score += 1;
+					enemy[i].enable = false;//“G‚ğ–³Œø
+					PlaySoundMem(explodese, DX_PLAYTYPE_BACK);
+					explosion(enemy[i]);//”š”­
+					A_light(enemy[i]);
 				}
 			}
 			//e‚ğ—â‚â‚·ˆ—

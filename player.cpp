@@ -3,6 +3,8 @@
 #include "DxLib.h"
 #include "shot.h"
 #include "player.h"
+#include "enemy.h"
+#include "Graph.h"
 
 En player;//プレイヤー
 int shotse;//ショットSE
@@ -29,7 +31,7 @@ void initPlayer()
 void updatePlayer()
 {
 	//プレイヤーを動かす
-	if (CheckHitKey(KEY_INPUT_RIGHT) == 1|| CheckHitKey(KEY_INPUT_D)==1)
+	if (CheckHitKey(KEY_INPUT_RIGHT) == 1 || CheckHitKey(KEY_INPUT_D) == 1)
 	{
 		player.x = player.x + 3.0;
 	}
@@ -63,7 +65,7 @@ void updatePlayer()
 	}
 
 	//弾を撃つ処理
-	if ((CheckHitKey(KEY_INPUT_Z) == 1|| CheckHitKey(KEY_INPUT_SPACE)) &&
+	if ((CheckHitKey(KEY_INPUT_Z) == 1 || CheckHitKey(KEY_INPUT_SPACE)) &&
 		player.cooltime <= 0)
 	{
 		//弾が無効なときのみ初期値をセットし有効にする
@@ -96,6 +98,22 @@ void drawPlayer()
 	}
 	DrawGraph(player.x - 50, player.y - 70, playerimg, true);
 	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 152);
-		
-	
+
+	if (CheckHitKey(KEY_INPUT_E) == 1)
+	{
+		for (int i = 0; i < EnemyNum; i++) {
+
+			rey(player, enemy[i]);
+		}
+	}
+}
+void rey(En p,En e)
+{
+	SetDrawBlendMode(DX_BLENDMODE_ADD, 100);
+	DrawGraph(p.x - 400, p.y - p.r - 800, reypht, true);
+	if (p.x - 150 < e.x + e.r && p.x + 150 > e.x - e.r && 0 < e.y && p.y - p.r > e.y)
+	{
+		e.hp--;
+	}
+	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 155);
 }
