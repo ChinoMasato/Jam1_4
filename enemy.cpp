@@ -27,7 +27,7 @@ void initEnemy()
 {
 	explodese = LoadSoundMem("”š”­2,mp3");
 	gameOverse = LoadSoundMem("tomoshibi.mp3");
-	gameclearse = LoadSoundMem("maou_se_jingle05.mp3");
+	gameclearse = LoadSoundMem("victory.mp3");
 	enemytenshotse = LoadSoundMem("‰Î‰Š–‚–@1.mp3");
 	bossse = LoadSoundMem("Œx•ñ2.mp3");
 
