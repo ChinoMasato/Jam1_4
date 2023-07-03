@@ -451,7 +451,8 @@ void updateEnemy()
 				PlaySoundMem(bossse, DX_PLAYTYPE_BACK);
 			}
 
-
+			if (player.star < 0)
+			{
 				if (isHit(player, enemy[i]))
 				{
 					//“–‚½‚Á‚Ä‚¢‚é
@@ -459,6 +460,7 @@ void updateEnemy()
 					player.hp--;
 					//player.star = 300;
 				}
+			}
 
 			for (int j = 0; j < ShotNum; j++) {
 				//“G‚Æ’e‚Æ‚Ì“–‚½‚è”»’è
