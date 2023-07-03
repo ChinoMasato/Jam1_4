@@ -14,6 +14,7 @@ extern bool gameOverFlag;//ゲームオーバー判定
 En enemy[EnemyNum];//敵
 
 int explodese;//爆発SE
+int explode1se;//爆発SE
 
 int enemytenshotse;//敵ショットSE
 int bossse;//ボス出現SE
@@ -26,6 +27,7 @@ int bossimg;
 void initEnemy()
 {
 	explodese = LoadSoundMem("爆発2 (1).mp3");
+	explode1se = LoadSoundMem("爆発4.mp3");
 	gameOverse = LoadSoundMem("tomoshibi.mp3");
 	gameclearse = LoadSoundMem("victory.mp3");
 	enemytenshotse = LoadSoundMem("火炎魔法1.mp3");
@@ -479,6 +481,7 @@ void updateEnemy()
 							score+=1;
 							enemy[i].enable = false;//敵を無効
 							PlaySoundMem(explodese, DX_PLAYTYPE_BACK);
+							PlaySoundMem(explode1se, DX_PLAYTYPE_BACK);
 							explosion(enemy[i]);//爆発
 							A_light(enemy[i]);
 						}
