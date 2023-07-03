@@ -101,8 +101,6 @@ void update()
 {
 	//ゲーム(審判)の更新
 	updateGame();
-	//プレイヤーの更新
-	updatePlayer();
 
 	//弾の更新
 	updateShot();
@@ -116,6 +114,8 @@ void update()
 	updateGraph();
 
 	updateBg();
+	//プレイヤーの更新
+	updatePlayer();
 
 	//描画処理
 	draw();

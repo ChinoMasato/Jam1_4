@@ -7,3 +7,4 @@ extern int playerimg;
 void initPlayer();//プレイヤーの初期化
 void updatePlayer();//プレイヤーの更新
 void drawPlayer();
+void rey(En p, En e);
