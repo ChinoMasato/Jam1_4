@@ -33,7 +33,7 @@ struct En
 	int spawnTiming;//出現タイミング
 	int hp;
 	int shp;//最大HP
-	double star;//無敵時間
+	int star;
 	std::map<int, MovePattern> pattern;
 
 };

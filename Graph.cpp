@@ -1,12 +1,13 @@
 #include "Graph.h"
 #include "DxLib.h"
 
+int lightpht;
 int TitleLogo;
 int PushEnterKey;
 
 void initGraph()
 {
-	TitleLogo = LoadGraph("a");
+	lightpht = LoadGraph("A_light.png");
 	PushEnterKey = LoadGraph("i");
 }
 void updateGraph()

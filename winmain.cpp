@@ -9,6 +9,7 @@
 #include "effect.h"
 #include "UI.h"
 #include "Graph.h"
+#include "bgsprite.h"
 
 void init();//初期化関数のプロトタイプ宣言
 void titleUpdate();
@@ -75,6 +76,8 @@ void init()
 	initGraph();
 	//エフェクトの初期化
 	initEffect();
+
+	initBg();
 	//タイトルBGM再生
 	PlayMusic("Short_SF_13.mp3", DX_PLAYTYPE_LOOP);
 	gamestartse = LoadSoundMem("完了6。mp3");
@@ -109,6 +112,8 @@ void update()
 	//画像関連の更新
 	updateGraph();
 
+	updateBg();
+
 	//描画処理
 	draw();
 }
@@ -116,6 +121,7 @@ void update()
 //描画処理
 void draw()
 {
+	drawBg();
 	//敵の描画
 	drawEnemy();
 	//プレイヤーの描画
