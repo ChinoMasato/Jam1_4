@@ -3,7 +3,8 @@
 #include "en.h"
 void drawUI()
 {
-	DrawBox(0, 0, player.hp*15, 30, (0, 0, 255), TRUE);
+	DrawBox(0, 0, player.hp * 15, 20, GetColor(50, 50, 255), TRUE);
+	DrawBox(0, 0, 150, 20, GetColor(255, 255, 255), FALSE);
 }
 void drawEHp(En en1)
 {
