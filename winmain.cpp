@@ -108,6 +108,7 @@ void update()
 	updateEnemyShot();
 	//敵の更新
 	updateEnemy();
+	updateBoss();
 	//エフェクトの更新
 	updateEffect(); 
 	//画像関連の更新

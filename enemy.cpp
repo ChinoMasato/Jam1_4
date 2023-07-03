@@ -157,7 +157,7 @@ void initEnemy()
 
 	//11‘Ì–Ú‚Ì“G
 	enemy[10].x = 300;
-	enemy[10].y = -12000;
+	enemy[10].y = -1000;
 	enemy[10].r = 100;
 	enemy[10].color = GetColor(255, 255, 0);
 	enemy[10].fill = true;
@@ -492,6 +492,26 @@ void updateEnemy()
 		}
 	}
 }
+void updateBoss()
+{
+	if (enemy[10].y == 100)
+	{
+		enemy[10].y = 101;
+		enemy[10].vy = 0;
+		enemy[10].vx = 2;
+	}
+	if (enemy[10].x < 30)
+	{
+		enemy[10].x = 40;
+		enemy[10].vx = -enemy[10].vx;
+	}
+	if(enemy[10].x > 570)
+	{
+		enemy[10].x = 560;
+		enemy[10].vx = -enemy[10].vx;
+	}
+}
+
 
 //“G‚Ì•`‰æ
 void drawEnemy()

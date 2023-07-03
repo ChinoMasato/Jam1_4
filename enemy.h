@@ -8,6 +8,7 @@ extern int bossimg;
 void initEnemy();//“G‚Ì‰Šú‰»
 void updateEnemy();//“G‚ÌXV
 void drawEnemy();//“G‚Ì•`‰æ
+void updateBoss();
 
 bool canEnemyShot(En enemy);//’e‚ªŒ‚‚Ä‚é‚©Šm”F
 
