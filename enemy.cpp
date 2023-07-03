@@ -534,7 +534,7 @@ void drawEnemy()
 			drawEHp(enemy[i]);
 		}
 	}
-	if (enemy[10].enable == true) {
+	if (enemy[24].enable == true) {
 
 		DrawGraph(enemy[10].x - 100, enemy[10].y - 88, bossimg, true);	
 		//DrawCircle(enemy[i].x, enemy[i].y, enemy[i].r, enemy[i].color, enemy[i].fill);
