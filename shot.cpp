@@ -12,7 +12,7 @@ void initShot()
 		shot[i].color = GetColor(255, 255, 0);
 		shot[i].fill = true;
 		shot[i].vx = 0.0;
-		shot[i].vy = -1.0;
+		shot[i].vy = -5.0;
 		shot[i].enable = false;
 	}
 }

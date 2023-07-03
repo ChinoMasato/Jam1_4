@@ -3,7 +3,7 @@
 #include "en.h"
 void drawUI()
 {
-	DrawBox(0, 0, player.hp, 30, (0, 0, 255), TRUE);
+	DrawBox(0, 0, player.hp*15, 30, (0, 0, 255), TRUE);
 }
 void drawEHp(En en1)
 {

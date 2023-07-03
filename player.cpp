@@ -22,7 +22,7 @@ void initPlayer()
 	player.color = GetColor(255, 255, 255);
 	player.fill = true;
 	player.cooltime = 0;
-	player.hp = 100;
+	player.hp = 10;
 	player.star = 0;
 }
 
