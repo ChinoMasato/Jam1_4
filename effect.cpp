@@ -30,11 +30,25 @@ void drawEffect()
 		if (effe[i].enable == true)
 		{
 			int no = effe[i].animeNo;
-			DrawGraph(effe[i].x, effe[i].y, img[no], true);
+			SetDrawBlendMode(DX_BLENDMODE_ADD, 180);
+			DrawGraph(effe[i].x, effe[i].y,lightpht, true);
+			SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 122);
 		}
 	}
 }
-void A_light(En en)
+void A_light(En en1)
 {
-	DrawGraph(en.x, en.y,lightpht,true);
+	for (int i = 0; i < EffectNum; i++)
+	{
+		if (effe[i].enable == false)
+		{
+			effe[i].enable = true;
+			effe[i].x = en1.x - 200;
+			effe[i].y = en1.y - 200;
+			effe[i].animeNo = 0;
+			effe[i].No = 0;
+			break;
+		}
+	}
+	
 }
