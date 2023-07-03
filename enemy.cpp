@@ -37,7 +37,7 @@ void initEnemy()
 	bossimg = LoadGraph("boss.png");
 	explodese = LoadSoundMem("maou_se_battle_explosion06.mp3");
 	//1�̖ڂ̓G
-	enemy[0].x = 300;
+	enemy[0].x = 100;
 	enemy[0].y = -1100;
 	enemy[0].r = 30;
 	enemy[0].color = GetColor(255, 0, 0);
@@ -50,15 +50,15 @@ void initEnemy()
 
 
 	//2�̖ڂ̓G
-	enemy[1].x = 300;
-	enemy[1].y = -1500;
+	enemy[1].x = 400;
+	enemy[1].y = -1100;
 	enemy[1].r = 30;
 	enemy[1].color = GetColor(255, 0, 0);
 	enemy[1].fill = true;
 	enemy[1].enable = true;
 	enemy[1].vx = 0.0;
 	enemy[1].vy = 1.0;
-	enemy[1].type = ENEMY4;
+	enemy[1].type = ENEMY1;
 	enemy[1].hp = 1;
 
 	//3�̖ڂ̓G
@@ -70,11 +70,11 @@ void initEnemy()
 	enemy[2].enable = true;
 	enemy[2].vx = 0.0;
 	enemy[2].vy = 1.0;
-	enemy[2].type = ENEMY3;
+	enemy[2].type = ENEMY2;
 	enemy[2].hp = 1;
 
 	//4�̖ڂ̓G
-	enemy[3].x = 300;
+	enemy[3].x = 200;
 	enemy[3].y = -2400;
 	enemy[3].r = 30;
 	enemy[3].color = GetColor(255, 0, 0);
@@ -86,15 +86,15 @@ void initEnemy()
 	enemy[3].hp = 1;
 
 	//5�̖ڂ̓G
-	enemy[4].x = 300;
-	enemy[4].y = -3000;
+	enemy[4].x = 400;
+	enemy[4].y = -2400;
 	enemy[4].r = 30;
 	enemy[4].color = GetColor(255, 0, 0);
 	enemy[4].fill = true;
 	enemy[4].enable = true;
 	enemy[4].vx = 0.0;
 	enemy[4].vy = 1.0;
-	enemy[4].type = ENEMY4;
+	enemy[4].type = ENEMY3;
 	enemy[4].hp = 1;
 
 	//6�̖ڂ̓G
@@ -106,7 +106,7 @@ void initEnemy()
 	enemy[5].enable = true;
 	enemy[5].vx = 0.0;
 	enemy[5].vy = 1.0;
-	enemy[5].type = ENEMY4;
+	enemy[5].type = ENEMY3;
 	enemy[5].hp = 1;
 
 	//7�̖ڂ̓G
@@ -122,7 +122,7 @@ void initEnemy()
 	enemy[6].hp = 1;
 
 	//8�̖ڂ̓G
-	enemy[7].x = 300;
+	enemy[7].x = 200;
 	enemy[7].y = -4200;
 	enemy[7].r = 30;
 	enemy[7].color = GetColor(255, 0, 0);
@@ -134,8 +134,8 @@ void initEnemy()
 	enemy[7].hp = 1;
 
 	//9�̖ڂ̓G
-	enemy[8].x = 300;
-	enemy[8].y = -5000;
+	enemy[8].x = 400;
+	enemy[8].y = -4200;
 	enemy[8].r = 30;
 	enemy[8].color = GetColor(255, 0, 0);
 	enemy[8].fill = true;
@@ -147,7 +147,7 @@ void initEnemy()
 
 	//10�̖ڂ̓G
 	enemy[9].x = 300;
-	enemy[9].y = -5500;
+	enemy[9].y = -5000;
 	enemy[9].r = 30;
 	enemy[9].color = GetColor(255, 0, 0);
 	enemy[9].fill = true;
@@ -159,7 +159,7 @@ void initEnemy()
 
 	//11�̖ڂ̓G
 	enemy[10].x = 300;
-	enemy[10].y = -7500;
+	enemy[10].y = -12000;
 	enemy[10].r = 100;
 	enemy[10].color = GetColor(255, 255, 0);
 	enemy[10].fill = true;
@@ -168,6 +168,159 @@ void initEnemy()
 	enemy[10].vy = 1.0;
 	enemy[10].type = ENEMY6;
 	enemy[10].hp = 5;
+
+	enemy[11].x = 100;
+	enemy[11].y = -5500;
+	enemy[11].r = 30;
+	enemy[11].color = GetColor(255, 0, 0);
+	enemy[11].fill = true;
+	enemy[11].enable = true;
+	enemy[11].vx = 0.0;
+	enemy[11].vy = 1.0;
+	enemy[11].type = ENEMY4;
+	enemy[11].hp = 1;
+
+	enemy[12].x = 500;
+	enemy[12].y = -5500;
+	enemy[12].r = 30;
+	enemy[12].color = GetColor(255, 0, 0);
+	enemy[12].fill = true;
+	enemy[12].enable = true;
+	enemy[12].vx = 0.0;
+	enemy[12].vy = 1.0;
+	enemy[12].type = ENEMY4;
+	enemy[12].hp = 1;
+
+	enemy[13].x = 300;
+	enemy[13].y = -6200;
+	enemy[13].r = 30;
+	enemy[13].color = GetColor(255, 0, 0);
+	enemy[13].fill = true;
+	enemy[13].enable = true;
+	enemy[13].vx = 0.0;
+	enemy[13].vy = 1.0;
+	enemy[13].type = ENEMY5;
+	enemy[13].hp = 1;
+
+	enemy[14].x = 300;
+	enemy[14].y = -6700;
+	enemy[14].r = 30;
+	enemy[14].color = GetColor(255, 0, 0);
+	enemy[14].fill = true;
+	enemy[14].enable = true;
+	enemy[14].vx = 0.0;
+	enemy[14].vy = 1.0;
+	enemy[14].type = ENEMY3;
+	enemy[14].hp = 1;
+
+	enemy[15].x = 200;
+	enemy[15].y = -7000;
+	enemy[15].r = 30;
+	enemy[15].color = GetColor(255, 0, 0);
+	enemy[15].fill = true;
+	enemy[15].enable = true;
+	enemy[15].vx = 0.0;
+	enemy[15].vy = 1.0;
+	enemy[15].type = ENEMY2;
+	enemy[15].hp = 1;
+
+	enemy[16].x = 400;
+	enemy[16].y = -7000;
+	enemy[16].r = 30;
+	enemy[16].color = GetColor(255, 0, 0);
+	enemy[16].fill = true;
+	enemy[16].enable = true;
+	enemy[16].vx = 0.0;
+	enemy[16].vy = 1.0;
+	enemy[16].type = ENEMY2;
+	enemy[16].hp = 1;
+
+	enemy[17].x = 100;
+	enemy[17].y = -7500;
+	enemy[17].r = 30;
+	enemy[17].color = GetColor(255, 0, 0);
+	enemy[17].fill = true;
+	enemy[17].enable = true;
+	enemy[17].vx = 0.0;
+	enemy[17].vy = 1.0;
+	enemy[17].type = ENEMY5;
+	enemy[17].hp = 1;
+
+	enemy[18].x = 500;
+	enemy[18].y = -7500;
+	enemy[18].r = 30;
+	enemy[18].color = GetColor(255, 0, 0);
+	enemy[18].fill = true;
+	enemy[18].enable = true;
+	enemy[18].vx = 0.0;
+	enemy[18].vy = 1.0;
+	enemy[18].type = ENEMY5;
+
+	enemy[19].x = 300;
+	enemy[19].y = -8000;
+	enemy[19].r = 30;
+	enemy[19].color = GetColor(255, 0, 0);
+	enemy[19].fill = true;
+	enemy[19].enable = true;
+	enemy[19].vx = 0.0;
+	enemy[19].vy = 1.0;
+	enemy[19].type = ENEMY6;
+	enemy[19].hp = 1;
+
+	enemy[20].x = 200;
+	enemy[20].y = -8300;
+	enemy[20].r = 30;
+	enemy[20].color = GetColor(255, 0, 0);
+	enemy[20].fill = true;
+	enemy[20].enable = true;
+	enemy[20].vx = 0.0;
+	enemy[20].vy = 1.0;
+	enemy[20].type = ENEMY5;
+
+	enemy[21].x = 400;
+	enemy[21].y = -8300;
+	enemy[21].r = 30;
+	enemy[21].color = GetColor(255, 0, 0);
+	enemy[21].fill = true;
+	enemy[21].enable = true;
+	enemy[21].vx = 0.0;
+	enemy[21].vy = 1.0;
+	enemy[21].type = ENEMY5;
+	enemy[21].hp = 1;
+
+	enemy[22].x = 300;
+	enemy[22].y = -8600;
+	enemy[22].r = 30;
+	enemy[22].color = GetColor(255, 0, 0);
+	enemy[22].fill = true;
+	enemy[22].enable = true;
+	enemy[22].vx = 0.0;
+	enemy[22].vy = 1.0;
+	enemy[22].type = ENEMY2;
+	enemy[22].hp = 1;
+
+	enemy[23].x = 150;
+	enemy[23].y = -9000;
+	enemy[23].r = 30;
+	enemy[23].color = GetColor(255, 0, 0);
+	enemy[23].fill = true;
+	enemy[23].enable = true;
+	enemy[23].vx = 0.0;
+	enemy[23].vy = 1.0;
+	enemy[23].type = ENEMY3;
+	enemy[23].hp = 1;
+
+	enemy[24].x = 450;
+	enemy[24].y = -9000;
+	enemy[24].r = 30;
+	enemy[24].color = GetColor(255, 0, 0);
+	enemy[24].fill = true;
+	enemy[24].enable = true;
+	enemy[24].vx = 0.0;
+	enemy[24].vy = 1.0;
+	enemy[24].type = ENEMY3;
+	enemy[24].hp = 1;
+	
 
 	for (int i = 0; i < EnemyNum; i++)
 	{
