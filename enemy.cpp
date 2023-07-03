@@ -326,6 +326,7 @@ void updateEnemy()
 							enemy[i].enable = false;//“G‚ð–³Œø
 							PlaySoundMem(explodese, DX_PLAYTYPE_BACK);
 							explosion(enemy[i]);//”š”­
+							A_light(enemy[i]);
 						}
 
 					}

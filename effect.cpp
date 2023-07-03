@@ -1,5 +1,7 @@
 #include "effect.h"
 #include "DxLib.h"
+#include "Graph.h"
+#include "en.h"
 Effect effe[EffectNum];//エフェクト用の変数
 int img[10];//最大１０コマ　画像
 
@@ -31,4 +33,8 @@ void drawEffect()
 			DrawGraph(effe[i].x, effe[i].y, img[no], true);
 		}
 	}
+}
+void A_light(En en)
+{
+	DrawGraph(en.x, en.y,lightpht,true);
 }

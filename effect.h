@@ -1,4 +1,5 @@
 #pragma once
+#include "en.h"
 const int EffectNum = 100;
 extern int img[10];//最大１０コマ　画像
 
@@ -15,3 +16,4 @@ extern Effect effe[EffectNum];//エフェクト用の変数
 void initEffect();
 void updateEffect();
 void drawEffect();
+void A_light(En en);
