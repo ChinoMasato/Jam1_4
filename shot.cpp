@@ -44,7 +44,7 @@ void drawShot()
 	for (int i = 0; i < ShotNum; i++) {
 		if (shot[i].enable == true)
 		{
-			SetDrawBlendMode(DX_BLENDMODE_ALPHA, 127);//”¼“§–¾
+			//SetDrawBlendMode(DX_BLENDMODE_ALPHA, 127);//”¼“§–¾
 			DrawGraph(shot[i].x, shot[i].y, shotimg,true);
 			//SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 0);//•s“§–¾
 			//DrawCircle(shot[i].x, shot[i].y, shot[i].r * 0.5, shot[i].color, shot[i].fill);
