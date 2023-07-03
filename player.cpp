@@ -27,32 +27,6 @@ void initPlayer()
 	player.hp = 30;
 }
 
-void aimShot(En player)
-{
-	//弾を撃てる状態
-//弾が無効なときのみ初期値をセットし有効にする
-	for (int j = 0; j < ShotNum; j++)
-	{
-		//撃てる弾をみつける
-		if (shot[j].enable == false) {
-			//弾を撃つ
-			shot[j].x = player.x;
-			shot[j].y = player.y;
-
-			double speed = 2.0;//速度
-			double dx = enemy[j].x - player.x;//プレイヤーと敵のx方向の距離
-			double dy = enemy[j].y - player.y;//プレイヤーと敵のy方向の距離
-			double d = sqrt(dx * dx + dy * dy);//敵とプレイヤーとの距離
-			shot[j].vx = speed * (dx / d);//xの移動量
-			shot[j].vy = speed * (dy / d);//yの移動量
-			shot[j].enable = true;
-			//shot[j].type = player.type;
-			shot[j].vvx = shot[j].vx * 0.05;
-			shot[j].vvy = shot[j].vy * 0.05;
-			break;
-		}
-	}
-}
 
 //プレイヤーの更新
 void updatePlayer()
@@ -110,7 +84,7 @@ void updatePlayer()
 			}
 		}
 	}
-	if (CheckHitKey(KEY_INPUT_C) == 1 &&
+	if (CheckHitKey(KEY_INPUT_Q) == 1 &&
 		player.cooltime <= 0)
 	{
 		for (int i = 0; i < ShotNum; i++)
