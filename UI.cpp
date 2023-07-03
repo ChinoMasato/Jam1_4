@@ -6,13 +6,13 @@ int damege = 150;
 void drawUI()
 {
 	count++;
-	if (player.hp * 15 < damege && count % 5 == 0) {
+	if (player.hp * 5 < damege && count % 5 == 0) {
 		damege--;
 	}
 	if (count % 10 > 5) {
 		DrawBox(0, 0, damege, 20, GetColor(200, 0, 0), TRUE);
 	}
-	DrawBox(0, 0, player.hp * 15, 20, GetColor(50, 50, 255), TRUE);
+	DrawBox(0, 0, player.hp * 5, 20, GetColor(50, 50, 255), TRUE);
 	DrawBox(0, 0, 150, 20, GetColor(255, 255, 255), FALSE);
 }
 void drawEHp(En en1)
