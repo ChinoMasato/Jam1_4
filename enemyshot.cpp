@@ -4,13 +4,16 @@
 #include "enemyshot.h"
 #include "player.h"
 #include "game.h"
+#include "enemy.h"
 
 En enemyshot[EnemyShotNum];//’e
 int enemyshotimg;
+int enemyshotimg2;
 //’e‚Ì‰Šú‰»
 void initEnemyShot()
 {
 	enemyshotimg = LoadGraph("enemyshot.png");
+	enemyshotimg2 = LoadGraph("‰Î‹…5.png");
 	for (int i = 0; i < EnemyShotNum; i++) {
 		enemyshot[i].r = 5;
 		enemyshot[i].color = GetColor(0, 255, 0);
@@ -81,6 +84,12 @@ void drawEnemyShot()
 		if (enemyshot[i].enable == true)
 		{
 			DrawGraph(enemyshot[i].x -50, enemyshot[i].y - 60, enemyshotimg,true);
+		}
+	}
+	for (int i = 0; i < EnemyShotNum; i++) {
+		if (enemyshot[i].enable == true && enemy[i].type == ENEMY3)
+		{
+			DrawGraph(enemyshot[i].x - 50, enemyshot[i].y - 60, enemyshotimg2, true);
 		}
 	}
 }
