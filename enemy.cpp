@@ -444,7 +444,7 @@ void updateEnemy()
 			}
 
 			//ボス出現SE
-			if (enemy[10].x == 800)
+			if (enemy[10].y == 0)
 			{
 				PlaySoundMem(bossse, DX_PLAYTYPE_BACK);
 			}
@@ -525,16 +525,7 @@ void drawEnemy()
 	}
 	if (enemy[10].enable == true) {
 
-		DrawGraph(enemy[10].x - 100, enemy[10].y - 88, bossimg, true);
-
-		SetDrawBlendMode(DX_BLENDMODE_INVSRC, 255); //反転合成 
-		DrawGraph(enemy[10].x - 100, enemy[10].y - 88, bossimg, true);
-		//Draw関数 
-		SetDrawBlendMode(DX_BLENDMODE_ADD, 255); //加算合成 
-		DrawGraph(enemy[10].x - 100, enemy[10].y - 88, bossimg, true);
-		//Draw関数で上と同じ物を重ねる 
-		SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 255);
-		
+		DrawGraph(enemy[10].x - 100, enemy[10].y - 88, bossimg, true);	
 		//DrawCircle(enemy[i].x, enemy[i].y, enemy[i].r, enemy[i].color, enemy[i].fill);
 		drawEHp(enemy[10]);
 	}
