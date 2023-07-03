@@ -86,7 +86,7 @@ void initEnemy()
 	enemy[3].hp = 1;
 
 	//5�̖ڂ̓G
-	enemy[4].x = 400;
+	enemy[4].x = 500;
 	enemy[4].y = -2400;
 	enemy[4].r = 30;
 	enemy[4].color = GetColor(255, 0, 0);
@@ -134,7 +134,7 @@ void initEnemy()
 	enemy[7].hp = 1;
 
 	//9�̖ڂ̓G
-	enemy[8].x = 400;
+	enemy[8].x = 500;
 	enemy[8].y = -4200;
 	enemy[8].r = 30;
 	enemy[8].color = GetColor(255, 0, 0);
