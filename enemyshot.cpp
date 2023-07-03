@@ -6,9 +6,11 @@
 #include "game.h"
 
 En enemyshot[EnemyShotNum];//’e
+int enemyshotimg;
 //’e‚Ì‰Šú‰»
 void initEnemyShot()
 {
+	enemyshotimg = LoadGraph("enemyshot.png");
 	for (int i = 0; i < EnemyShotNum; i++) {
 		enemyshot[i].r = 5;
 		enemyshot[i].color = GetColor(0, 255, 0);
@@ -78,7 +80,7 @@ void drawEnemyShot()
 	for (int i = 0; i < EnemyShotNum; i++) {
 		if (enemyshot[i].enable == true)
 		{
-			DrawCircle(enemyshot[i].x, enemyshot[i].y, enemyshot[i].r, enemyshot[i].color, enemyshot[i].fill);
+			DrawGraph(enemyshot[i].x -50, enemyshot[i].y - 60, enemyshotimg,true);
 		}
 	}
 }

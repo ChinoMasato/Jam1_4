@@ -89,7 +89,7 @@ void titleUpdate()
 	{
 		scene = Game;
 		PlayMusic("Shooting_01.mp3", DX_PLAYTYPE_LOOP);
-		gamestartse = LoadSoundMem("完了6。mp3");
+		PlaySoundMem(gamestartse, DX_PLAYTYPE_BACK);
 	}
 	DrawGraph(0, 300, TitleLogo, true);
 	//DrawGraph(180, 380, PushEnterKey, true);
