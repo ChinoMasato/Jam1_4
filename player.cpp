@@ -83,6 +83,28 @@ void updatePlayer()
 			}
 		}
 	}
+	if (CheckHitKey(KEY_INPUT_Q) == 1 &&
+		player.cooltime <= 0)
+	{
+		for (int i = 0; i < ShotNum; i++)
+		{
+			if (shot[i].enable == false) {
+				shot[i].x = player.x;
+				shot[i].y = player.y;
+				double speed = 4.0;//速度
+				double dx = enemy[i].x - shot[i].x;//プレイヤーと敵のx方向の距離
+				double dy = enemy[i].y - shot[i].y;//プレイヤーと敵のy方向の距離
+
+				double d = sqrt(dx * dx + dy * dy);//敵とプレイヤーとの距離
+				shot[i].vx = speed * (dx / d);//xの移動量
+				shot[i].vy = speed * (dy / d);//yの移動量
+				shot[i].enable = true;
+				player.cooltime = 10;//連射速度　小さいほど連射できる
+				PlaySoundMem(shotse, DX_PLAYTYPE_BACK);
+				break;
+			}
+		}
+	}
 	//銃を冷やす処理
 	if (player.cooltime > 0) {
 		player.cooltime--;
