@@ -3,7 +3,7 @@
 
 extern En player;//プレイヤー
 extern int playerimg;
-
+extern int shottype;
 
 
 void initPlayer();//プレイヤーの初期化

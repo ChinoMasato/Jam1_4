@@ -68,6 +68,7 @@ void init()
 	initPlayer();
 	//弾の初期化
 	initShot();
+	initShot2();
 	initEnemyShot();
 	//敵の初期化処理
 	initEnemy();
@@ -104,6 +105,7 @@ void update()
 
 	//弾の更新
 	updateShot();
+	updateShot2();
 	updateEnemyShot();
 	//敵の更新
 	updateEnemy();
@@ -131,6 +133,7 @@ void draw()
 	drawPlayer();
 	//弾の描画
 	drawShot();
+	drawShot2();
 	drawEnemyShot();
 	//エフェクトの描画
 	drawEffect();

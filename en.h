@@ -7,7 +7,8 @@ enum EnemyType
 	ENEMY3,//敵タイプ３
 	ENEMY4,//敵タイプ４
 	ENEMY5, //敵タイプ５
-	ENEMY6
+	ENEMY6,
+	Shot
 };
 struct MovePattern
 {

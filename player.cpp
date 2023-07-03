@@ -71,6 +71,8 @@ void updatePlayer()
 		//弾が無効なときのみ初期値をセットし有効にする
 		for (int i = 0; i < ShotNum; i++)
 		{
+			shot[i].vx = 0.0;
+			shot[i].vy = -5.0;
 			//撃てる弾をみつける
 			if (shot[i].enable == false) {
 				//弾を撃つ
@@ -101,10 +103,15 @@ void updatePlayer()
 				shot[i].enable = true;
 				player.cooltime = 10;//連射速度　小さいほど連射できる
 				PlaySoundMem(shotse, DX_PLAYTYPE_BACK);
+				
 				break;
 			}
+
 		}
+		
 	}
+
+	
 	//銃を冷やす処理
 	if (player.cooltime > 0) {
 		player.cooltime--;
