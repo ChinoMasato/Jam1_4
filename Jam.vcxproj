@@ -93,6 +93,7 @@
     <ClCompile Include="enemyshot.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="music.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="shot.cpp" />
     <ClCompile Include="UI.cpp" />
@@ -106,6 +107,7 @@
     <ClInclude Include="enemyshot.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="Graph.h" />
+    <ClInclude Include="music.h" />
     <ClInclude Include="player.h" />
     <ClInclude Include="shot.h" />
     <ClInclude Include="tsuchiya.h" />
