@@ -30,7 +30,7 @@ void drawEffect()
 		if (effe[i].enable == true)
 		{
 			int no = effe[i].animeNo;
-			SetDrawBlendMode(DX_BLENDMODE_ADD, 255);
+			SetDrawBlendMode(DX_BLENDMODE_ADD, 180);
 			DrawGraph(effe[i].x, effe[i].y,lightpht, true);
 			SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 122);
 		}
