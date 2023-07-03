@@ -300,6 +300,7 @@ void updateEnemy()
 					player.hp--;
 					player.star = 300;
 				}
+				PlaySoundMem(gameOverse, DX_PLAYTYPE_BACK);
 			}
 
 			for (int j = 0; j < ShotNum; j++) {
