@@ -14,6 +14,7 @@ extern bool gameOverFlag;//ゲームオーバー判定
 En enemy[EnemyNum];//敵
 
 int explodese;//爆発SE
+int explode1se;//爆発SE
 
 int enemytenshotse;//敵ショットSE
 int bossse;//ボス出現SE
@@ -26,7 +27,8 @@ int bossimg;
 //敵の初期化
 void initEnemy()
 {
-	explodese = LoadSoundMem("爆発4.mp3");
+	explodese = LoadSoundMem("爆発2 (1).mp3");
+	explode1se = LoadSoundMem("爆発4.mp3");
 	gameOverse = LoadSoundMem("tomoshibi.mp3");
 	gameclearse = LoadSoundMem("victory.mp3");
 	enemytenshotse = LoadSoundMem("火炎魔法1.mp3");
@@ -35,7 +37,7 @@ void initEnemy()
 	enemyimg = LoadGraph("mob.png");
 	enemyimg2 = LoadGraph("mob2.png");
 	bossimg = LoadGraph("boss.png");
-	explodese = LoadSoundMem("maou_se_battle_explosion06.mp3");
+
 	//1体目の敵
 	enemy[0].x = 100;
 	enemy[0].y = -1100;
@@ -476,11 +478,12 @@ void updateEnemy()
 						if (enemy[i].hp == 0)
 						{
 							
-							PlaySoundMem(explodese, DX_PLAYTYPE_BACK);
+							
 							//スコアの増加量を変えるならここ
 							score+=1;
 							enemy[i].enable = false;//敵を無効
-						
+							PlaySoundMem(explodese, DX_PLAYTYPE_BACK);
+							PlaySoundMem(explode1se, DX_PLAYTYPE_BACK);
 							explosion(enemy[i]);//爆発
 							A_light(enemy[i]);
 						}
