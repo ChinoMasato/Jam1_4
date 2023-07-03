@@ -28,7 +28,7 @@ void initEnemy()
 	explodese = LoadSoundMem("爆発2,mp3");
 	gameOverse = LoadSoundMem("tomoshibi.mp3");
 	gameclearse = LoadSoundMem("maou_se_jingle05.mp3");
-	enemytenshotse = LoadSoundMem("ショット7.mp3");
+	enemytenshotse = LoadSoundMem("火炎魔法1.mp3");
 	bossse = LoadSoundMem("警報2.mp3");
 
 	enemyimg = LoadGraph("mob.png");

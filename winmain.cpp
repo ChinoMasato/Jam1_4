@@ -78,7 +78,7 @@ void init()
 
 	initBg();
 	//タイトルBGM再生
-	gamestartse = LoadSoundMem("完了6。mp3");
+	gamestartse = LoadSoundMem("完了6.mp3");
 	PlayMusic("Short_SF_13.mp3", DX_PLAYTYPE_LOOP);
 	
 }
