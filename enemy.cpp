@@ -458,7 +458,7 @@ void updateEnemy()
 					//“–‚½‚Á‚Ä‚¢‚é
 					player.color = enemy[i].color;
 					player.hp--;
-					//player.star = 300;
+					player.star = 300;
 				}
 			}
 

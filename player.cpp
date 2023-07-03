@@ -85,7 +85,7 @@ void updatePlayer()
 	if (player.cooltime > 0) {
 		player.cooltime--;
 	}
-	//player.star--;//無敵時間をカウントダウンさせる
+	player.star--;//無敵時間をカウントダウンさせる
 }
 
 //プレイヤーの描画
