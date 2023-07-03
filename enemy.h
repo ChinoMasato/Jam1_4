@@ -3,6 +3,7 @@
 const int EnemyNum = 30;//“G‚Ì”
 extern En enemy[EnemyNum];//“G
 extern int enemyimg;
+extern int enemyimg2;
 extern int bossimg;
 
 void initEnemy();//“G‚Ì‰Šú‰»

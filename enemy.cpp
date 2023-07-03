@@ -21,6 +21,7 @@ int gameOverse;//ゲームオーバーSE
 int gameclearse;//ゲームクリアSE
 
 int enemyimg;
+int enemyimg2;
 int bossimg;
 //敵の初期化
 void initEnemy()
@@ -32,6 +33,7 @@ void initEnemy()
 	bossse = LoadSoundMem("警報2.mp3");
 
 	enemyimg = LoadGraph("mob.png");
+	enemyimg2 = LoadGraph("mob2.png");
 	bossimg = LoadGraph("boss.png");
 	explodese = LoadSoundMem("maou_se_battle_explosion06.mp3");
 	//1体目の敵
@@ -520,6 +522,13 @@ void drawEnemy()
 	for (int i = 0; i < EnemyNum; i++) {
 		if (enemy[i].enable == true) {
 			DrawGraph(enemy[i].x - 25, enemy[i].y - 27, enemyimg, true);
+			//DrawCircle(enemy[i].x, enemy[i].y, enemy[i].r, enemy[i].color, enemy[i].fill);
+			drawEHp(enemy[i]);
+		}
+	}
+	for(int i = 0; i < EnemyNum; i++ ){
+		if (enemy[i].enable == true && enemy[i].type == ENEMY3) {
+			DrawGraph(enemy[i].x - 50, enemy[i].y - 44, enemyimg2, true);
 			//DrawCircle(enemy[i].x, enemy[i].y, enemy[i].r, enemy[i].color, enemy[i].fill);
 			drawEHp(enemy[i]);
 		}
