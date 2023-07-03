@@ -160,16 +160,16 @@ void initEnemy()
 	enemy[9].hp = 1;
 
 	//11‘Ì–Ú‚Ì“G
-	enemy[10].x = 300;
-	enemy[10].y = -10000;
-	enemy[10].r = 100;
-	enemy[10].color = GetColor(255, 255, 0);
+	enemy[10].x = 450;
+	enemy[10].y = -9000;
+	enemy[10].r = 30;
+	enemy[10].color = GetColor(255, 0, 0);
 	enemy[10].fill = true;
 	enemy[10].enable = true;
 	enemy[10].vx = 0.0;
 	enemy[10].vy = 1.0;
-	enemy[10].type = ENEMY6;
-	enemy[10].hp = 5;
+	enemy[10].type = ENEMY3;
+	enemy[10].hp = 1;
 
 	enemy[11].x = 100;
 	enemy[11].y = -5500;
@@ -313,18 +313,17 @@ void initEnemy()
 	enemy[23].vy = 1.0;
 	enemy[23].type = ENEMY3;
 	enemy[23].hp = 1;
-
-	enemy[24].x = 450;
-	enemy[24].y = -9000;
-	enemy[24].r = 30;
-	enemy[24].color = GetColor(255, 0, 0);
+	
+	enemy[24].x = 300;
+	enemy[24].y = -10000;
+	enemy[24].r = 100;
+	enemy[24].color = GetColor(255, 255, 0);
 	enemy[24].fill = true;
 	enemy[24].enable = true;
 	enemy[24].vx = 0.0;
 	enemy[24].vy = 1.0;
-	enemy[24].type = ENEMY3;
-	enemy[24].hp = 1;
-	
+	enemy[24].type = ENEMY6;
+	enemy[24].hp = 5;
 
 	for (int i = 0; i < EnemyNum; i++)
 	{
@@ -448,7 +447,7 @@ void updateEnemy()
 			}
 
 			//ƒ{ƒXoŒ»SE
-			if (enemy[10].y == 0)
+			if (enemy[24].y == 0)
 			{
 				PlaySoundMem(bossse, DX_PLAYTYPE_BACK);
 			}
@@ -500,21 +499,21 @@ void updateEnemy()
 }
 void updateBoss()
 {
-	if (enemy[10].y == 100)
+	if (enemy[24].y == 100)
 	{
-		enemy[10].y = 101;
-		enemy[10].vy = 0;
-		enemy[10].vx = 2;
+		enemy[24].y = 101;
+		enemy[24].vy = 0;
+		enemy[24].vx = 2;
 	}
-	if (enemy[10].x < 30)
+	if (enemy[24].x < 30)
 	{
-		enemy[10].x = 40;
-		enemy[10].vx = -enemy[10].vx;
+		enemy[24].x = 40;
+		enemy[24].vx = -enemy[10].vx;
 	}
-	if(enemy[10].x > 570)
+	if(enemy[24].x > 570)
 	{
-		enemy[10].x = 560;
-		enemy[10].vx = -enemy[10].vx;
+		enemy[24].x = 560;
+		enemy[24].vx = -enemy[10].vx;
 	}
 }
 
@@ -528,8 +527,7 @@ void drawEnemy()
 			//DrawCircle(enemy[i].x, enemy[i].y, enemy[i].r, enemy[i].color, enemy[i].fill);
 			drawEHp(enemy[i]);
 		}
-	}
-	for(int i = 0; i < EnemyNum; i++ ){
+	
 		if (enemy[i].enable == true && enemy[i].type == ENEMY3) {
 			DrawGraph(enemy[i].x - 50, enemy[i].y - 44, enemyimg2, true);
 			//DrawCircle(enemy[i].x, enemy[i].y, enemy[i].r, enemy[i].color, enemy[i].fill);

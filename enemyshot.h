@@ -1,5 +1,6 @@
 #pragma once
 #include "en.h"
+#include "enemy.h"
 
 const int EnemyShotNum = 100;
 extern En enemyshot[EnemyShotNum];//’e

@@ -81,13 +81,13 @@ void updateEnemyShot()
 void drawEnemyShot()
 {
 	for (int i = 0; i < EnemyShotNum; i++) {
-		if (enemyshot[i].enable == true)
+		if (enemyshot[i].enable == true  && enemyshot[i].type != ENEMY3)
 		{
 			DrawGraph(enemyshot[i].x -50, enemyshot[i].y - 60, enemyshotimg,true);
 		}
 	}
 	for (int i = 0; i < EnemyShotNum; i++) {
-		if (enemyshot[i].enable == true && enemy[i].type == ENEMY3)
+		if (enemyshot[i].type == ENEMY3 && enemyshot[i].enable == true)
 		{
 			DrawGraph(enemyshot[i].x - 50, enemyshot[i].y - 60, enemyshotimg2, true);
 		}
