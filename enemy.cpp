@@ -444,7 +444,7 @@ void updateEnemy()
 			}
 
 			//É{ÉXèoåªSE
-			if (enemy[10].x == 800)
+			if (enemy[10].y == 0)
 			{
 				PlaySoundMem(bossse, DX_PLAYTYPE_BACK);
 			}
