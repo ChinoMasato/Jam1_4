@@ -14,7 +14,7 @@ void drawUI()
 	}
 	DrawBox(0, 0, player.hp * 5, 20, GetColor(50, 50, 255), TRUE);
 	DrawBox(0, 0, 150, 20, GetColor(255, 255, 255), FALSE);
-	DrawFormatString(200, 20, GetColor(255, 255, 255), "wasd 矢印キーで操作　space z で射撃");
+	DrawFormatString(200, 0, GetColor(255, 255, 255), "wasd 矢印キーで操作　space z で射撃");
 }
 void drawEHp(En en1)
 {
