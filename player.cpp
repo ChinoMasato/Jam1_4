@@ -108,6 +108,15 @@ void updatePlayer()
 			}
 		}
 	}
+	if (CheckHitKey(KEY_INPUT_E) == 1) {
+		for (int i = 0; i < EnemyNum; i++) {
+
+			if (player.x - 200 < enemy[i].x + enemy[i].r && player.x + 200 > enemy[i].x - enemy[i].r && 0 < enemy[i].y + enemy[i].r && player.y - player.r > enemy[i].y - enemy[i].r)
+			{
+				enemy[i].hp--;
+			}
+		}
+	}
 	//e‚ð—â‚â‚·ˆ—
 	if (player.cooltime > 0) {
 		player.cooltime--;
@@ -126,19 +135,8 @@ void drawPlayer()
 
 	if (CheckHitKey(KEY_INPUT_E) == 1)
 	{
-		for (int i = 0; i < EnemyNum; i++) {
-
-			rey(player, enemy[i]);
-		}
+		SetDrawBlendMode(DX_BLENDMODE_ALPHA, 200);
+		DrawGraph(player.x - 400, player.y - player.r - 800, reypht, true);
+		SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 155);
 	}
-}
-void rey(En p,En e)
-{
-	SetDrawBlendMode(DX_BLENDMODE_ADD, 100);
-	DrawGraph(p.x - 400, p.y - p.r - 800, reypht, true);
-	if (p.x - 150 < e.x + e.r && p.x + 150 > e.x - e.r && 0 < e.y && p.y - p.r > e.y)
-	{
-		e.hp--;
-	}
-	SetDrawBlendMode(DX_BLENDMODE_NOBLEND, 155);
 }
