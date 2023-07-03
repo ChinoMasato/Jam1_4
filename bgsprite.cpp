@@ -16,11 +16,12 @@ void initBg()
 }
 double scroll(double y, double speed)
 {
+	
 	y = y + speed;
-	if (y <= 1000.0)//‰æ‘œ1–‡•ª‰º‚ÉƒYƒŒ‚½‚ç
+	if (y >= 1000.0)//‰æ‘œ1–‡•ª‰º‚ÉƒYƒŒ‚½‚ç
 	{
 		//‰æ‘œ2–‡•ªã‚É–ß‚·
-		y = y - 1000.0;
+		y =- 1000.0;
 	}
 	return y;
 }
@@ -35,9 +36,9 @@ void updateBg()
 }
 void drawBg()
 {
-	DrawGraph(300, scrollY1, bgimg1, true);
-	DrawGraph(300, scrollY2, bgimg2, true);
+	DrawGraph(0, scrollY1, bgimg1, true);
+	DrawGraph(0, scrollY2, bgimg2, true);
 
-	DrawGraph(300, scrollY3, bgimg0, true);
-	DrawGraph(300, scrollY4, bgimg0, true);
+	DrawGraph(0, scrollY3, bgimg0, true);
+	DrawGraph(0, scrollY4, bgimg0, true);
 }
