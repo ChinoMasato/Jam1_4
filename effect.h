@@ -10,10 +10,11 @@ struct Effect
 	double animeNo = 0;//何コマ目？
 	int maxAnimeNo;//最大コマ数
 	bool enable = false;//有効フラグ
+	double No;
 };
 extern Effect effe[EffectNum];//エフェクト用の変数
 
 void initEffect();
 void updateEffect();
 void drawEffect();
-void A_light(En en);
+void A_light(En en1);
