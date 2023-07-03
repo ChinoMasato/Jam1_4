@@ -496,7 +496,7 @@ void updateEnemy()
 //“G‚Ì•`‰æ
 void drawEnemy()
 {
-	for (int i = 0; i < 10; i++) {
+	for (int i = 0; i < EnemyNum; i++) {
 		if (enemy[i].enable == true) {
 			DrawGraph(enemy[i].x - 25, enemy[i].y - 27, enemyimg, true);
 			//DrawCircle(enemy[i].x, enemy[i].y, enemy[i].r, enemy[i].color, enemy[i].fill);
