@@ -8,6 +8,7 @@ int PushEnterKey;
 void initGraph()
 {
 	lightpht = LoadGraph("A_light.png");
+	TitleLogo = LoadGraph("youjosenki (1).png");
 	PushEnterKey = LoadGraph("i");
 }
 void updateGraph()
