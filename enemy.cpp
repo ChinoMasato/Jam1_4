@@ -474,11 +474,11 @@ void updateEnemy()
 						if (enemy[i].hp == 0)
 						{
 							
-							PlaySoundMem(explodese, DX_PLAYTYPE_BACK);
+							
 							//ƒXƒRƒA‚Ì‘‰Á—Ê‚ğ•Ï‚¦‚é‚È‚ç‚±‚±
 							score+=1;
 							enemy[i].enable = false;//“G‚ğ–³Œø
-						
+							PlaySoundMem(explodese, DX_PLAYTYPE_BACK);
 							explosion(enemy[i]);//”š”­
 							A_light(enemy[i]);
 						}
