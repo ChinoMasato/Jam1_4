@@ -9,7 +9,7 @@ int PushEnterKey;
 void initGraph()
 {
 	lightpht = LoadGraph("A_light.png");
-	Gameoverpht = LoadGraph("gazou.mati");
+	Gameoverpht = LoadGraph("gameover.png");
 	TitleLogo = LoadGraph("youjosenki (1).png");
 	PushEnterKey = LoadGraph("i");
 }

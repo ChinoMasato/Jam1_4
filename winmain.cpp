@@ -139,5 +139,5 @@ void draw()
 }
 void gameoverUpdate()
 {
-	DrawGraph(0, 0, Gameoverpht, true);
+	DrawGraph(-300, 100, Gameoverpht, true);
 }
