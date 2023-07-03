@@ -15,16 +15,11 @@ void init();//初期化関数のプロトタイプ宣言
 void titleUpdate();
 void update();//更新関数のプロトタイプ宣言
 void draw();//描画処理
-
+void gameoverUpdate();
 int gamestartse;
 
-enum GameScene
-{
-	Title,
-	Game,
-	Result
-};
-GameScene scene = Title;
+
+
 // プログラムは WinMain から始まります
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
@@ -39,7 +34,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	//DXライブラリの初期化処理 ここまで
 
 	init();//初期化処理の呼び出し　起動時一度だけ呼び出す
-
+	scene = Title;
 	//メインループ処理
 	while (ProcessMessage() == 0 && CheckHitKey(KEY_INPUT_ESCAPE) == 0) {
 		if (scene == Title)
@@ -49,6 +44,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		if (scene == Game)
 		{
 			update();//更新処理の呼び出し
+		}
+		if (scene == Gameover)
+		{
+			gameoverUpdate();
 		}
 		ScreenFlip();		//裏画面と表画面の入替
 		ClearDrawScreen();	//裏画面の描画を全て消去
@@ -91,7 +90,7 @@ void titleUpdate()
 		PlayMusic("Shooting_01.mp3", DX_PLAYTYPE_LOOP);
 	}
 	DrawGraph(0, 300, TitleLogo, true);
-	DrawGraph(180, 380, PushEnterKey, true);
+	//DrawGraph(180, 380, PushEnterKey, true);
 }
 
 //更新関数
@@ -135,4 +134,8 @@ void draw()
 	drawGame();
 
 	drawUI();
+}
+void gameoverUpdate()
+{
+	DrawGraph(0, 0, Gameoverpht, true);
 }

@@ -3,12 +3,12 @@
 
 int lightpht;
 int TitleLogo;
-int PushEnterKey;
+int Gameoverpht;
 
 void initGraph()
 {
 	lightpht = LoadGraph("A_light.png");
-	PushEnterKey = LoadGraph("i");
+	Gameoverpht = LoadGraph("gazou.mati");
 }
 void updateGraph()
 {

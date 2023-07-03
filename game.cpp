@@ -4,7 +4,7 @@
 //ゲーム関連の情報
 int score = 0;//点数
 bool gameOverFlag = false;//ゲームオーバー判定
-
+GameScene scene;
 //ゲームの初期化
 void initGame()
 {
@@ -16,6 +16,7 @@ void updateGame()
 	if (player.hp <= 0)
 	{
 		gameOverFlag = true;
+		scene = Gameover;
 	}
 }
 //ゲーム情報の描画
@@ -25,5 +26,6 @@ void drawGame()
 
 	if (gameOverFlag == true) {
 		DrawFormatString(300, 300, GetColor(255, 0, 0), "ゲームオーバー");
+
 	}
 }
