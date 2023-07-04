@@ -22,7 +22,8 @@ void initShot()
 	bomb.color = GetColor(255, 255, 0);
 	bomb.fill = true;
 	bomb.vx = 0.0;
-	bomb.vy = -4.0;
+	bomb.vy = -1.0;
+	bomb.z = 0;
 	bomb.enable = false;
 }
 //’e‚ÌXV

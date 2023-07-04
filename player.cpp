@@ -127,8 +127,6 @@ void updatePlayer()
 
 	if (CheckHitKey(KEY_INPUT_X) == 1 && bomb.cooltime == 0)
 	{
-		bomb.vx = 0.0;
-		bomb.vy = -5.0;
 		//Œ‚‚Ä‚é’e‚ð‚Ý‚Â‚¯‚é
 		if (bomb.enable == false) {
 			//’e‚ðŒ‚‚Â
