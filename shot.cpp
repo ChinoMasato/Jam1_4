@@ -17,6 +17,12 @@ void initShot()
 		shot[i].enable = false;
 		shotimg = LoadGraph("shotimg.png");
 	}
+	bomb.r = 7;
+	bomb.color = GetColor(255, 255, 0);
+	bomb.fill = true;
+	bomb.vx = 0.0;
+	bomb.vy = -4.0;
+	bomb.enable = false;
 }
 //íeÇÃçXêV
 void updateShot()
@@ -50,5 +56,9 @@ void drawShot()
 			//DrawCircle(shot[i].x, shot[i].y, shot[i].r * 0.5, shot[i].color, shot[i].fill);
 
 		}
+	}
+	if (bomb.enable == true)
+	{
+		DrawCircle(bomb.x, bomb.y, bomb.r, GetColor(255, 0, 0));
 	}
 }
