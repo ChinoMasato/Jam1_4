@@ -133,7 +133,7 @@ void updatePlayer()
 			bomb.x = player.x + 1;
 			bomb.y = player.y - 50;
 			bomb.enable = true;
-			bomb.cooltime = 1000;//連射速度　小さいほど連射できる
+			bomb.cooltime = 1;//連射速度　小さいほど連射できる
 			PlaySoundMem(shotse, DX_PLAYTYPE_BACK);
 		}
 	}

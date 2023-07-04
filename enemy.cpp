@@ -477,6 +477,14 @@ void updateEnemy()
 				}
 
 			}
+			if (bomb.enable == true) {
+				if (isHit(bomb, enemy[i]))
+				{
+					//“–‚½‚Á‚Ä‚¢‚é
+					bomb.z = 1;//’e‚ð–³Œø
+					enemy[i].hp--;
+				}
+			}
 			//“GŽ€–S
 			if (enemy[i].hp <= 0)
 			{
