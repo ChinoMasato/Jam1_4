@@ -18,7 +18,7 @@ void initShot()
 		shot[i].enable = false;
 		shotimg = LoadGraph("shotimg.png");
 	}
-	bomb.r = 7;
+	bomb.r = 10;
 	bomb.color = GetColor(255, 255, 0);
 	bomb.fill = true;
 	bomb.vx = 0.0;
@@ -40,6 +40,17 @@ void updateShot()
 			if (shot[i].y < 0)
 			{
 				shot[i].enable = false;
+			}
+		}
+		if (bomb.enable == true) {
+			bomb.x = bomb.x + bomb.vx;
+			bomb.y = bomb.y + bomb.vy;
+			if (bomb.x >= 600) {
+				bomb.enable = false;
+			}
+			if (bomb.y < 0)
+			{
+				bomb.enable = false;
 			}
 		}
 		

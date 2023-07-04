@@ -144,6 +144,9 @@ void updatePlayer()
 	if (player.cooltime > 0) {
 		player.cooltime--;
 	}
+	if (bomb.cooltime > 0) {
+		bomb.cooltime--;
+	}
 	player.star--;//無敵時間をカウントダウンさせる
 	countrey--;
 }
