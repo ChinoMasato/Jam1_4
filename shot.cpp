@@ -6,6 +6,7 @@
 En shot[ShotNum];//’e
 En bomb;
 int shotimg;
+int bombimg;
 //’e‚Ì‰Šú‰»
 void initShot()
 {
@@ -25,6 +26,7 @@ void initShot()
 	bomb.vy = -1.0;
 	bomb.z = 0;
 	bomb.enable = false;
+	bombimg = LoadGraph("ex.png");
 }
 //’e‚ÌXV
 void updateShot()
@@ -72,6 +74,6 @@ void drawShot()
 	}
 	if (bomb.enable == true)
 	{
-		DrawCircle(bomb.x, bomb.y, bomb.r, GetColor(255, 0, 0));
+		DrawGraph(bomb.x - 50, bomb.y - 50, bombimg, true);
 	}
 }
