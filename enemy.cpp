@@ -509,12 +509,12 @@ void updateBoss()
 	if (enemy[24].x < 30)
 	{
 		enemy[24].x = 40;
-		enemy[24].vx = -enemy[10].vx;
+		enemy[24].vx = -enemy[24].vx;
 	}
 	if(enemy[24].x > 570)
 	{
 		enemy[24].x = 560;
-		enemy[24].vx = -enemy[10].vx;
+		enemy[24].vx = -enemy[24].vx;
 	}
 }
 
@@ -537,9 +537,9 @@ void drawEnemy()
 	}
 	if (enemy[24].enable == true) {
 
-		DrawGraph(enemy[10].x - 100, enemy[10].y - 88, bossimg, true);	
+		DrawGraph(enemy[24].x - 100, enemy[24].y - 88, bossimg, true);	
 		//DrawCircle(enemy[i].x, enemy[i].y, enemy[i].r, enemy[i].color, enemy[i].fill);
-		drawEHp(enemy[10]);
+		drawEHp(enemy[24]);
 	}
 	
 }
