@@ -124,6 +124,22 @@ void updatePlayer()
 			countrey = 70;
 		}
 	}
+
+	if (CheckHitKey(KEY_INPUT_X) == 1 && bomb.cooltime == 0)
+	{
+		bomb.vx = 0.0;
+		bomb.vy = -5.0;
+		//Œ‚‚Ä‚é’e‚ð‚Ý‚Â‚¯‚é
+		if (bomb.enable == false) {
+			//’e‚ðŒ‚‚Â
+			bomb.x = player.x + 1;
+			bomb.y = player.y - 50;
+			bomb.enable = true;
+			bomb.cooltime = 1000;//˜AŽË‘¬“x@¬‚³‚¢‚Ù‚Ç˜AŽË‚Å‚«‚é
+			PlaySoundMem(shotse, DX_PLAYTYPE_BACK);
+		}
+	}
+
 	//e‚ð—â‚â‚·ˆ—
 	if (player.cooltime > 0) {
 		player.cooltime--;
