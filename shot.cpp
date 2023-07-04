@@ -4,6 +4,7 @@
 #include "shot.h"
 
 En shot[ShotNum];//’e
+En bomb;
 int shotimg;
 //’e‚Ì‰Šú‰»
 void initShot()
