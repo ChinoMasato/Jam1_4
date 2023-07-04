@@ -133,11 +133,20 @@ void updatePlayer()
 			bomb.x = player.x + 1;
 			bomb.y = player.y - 50;
 			bomb.enable = true;
-			bomb.cooltime = 1;//連射速度　小さいほど連射できる
+			bomb.cooltime = 100;//連射速度　小さいほど連射できる
 			PlaySoundMem(shotse, DX_PLAYTYPE_BACK);
 		}
 	}
+	if (bomb.z == 1) {
+		bomb.r = bomb.r + 2;
+		bomb.vy = 0;
 
+		if (bomb.r <= 30) {
+			bomb.z = 0;
+			bomb.vy = -1;
+			bomb.enable = false;
+		}
+	}
 	//銃を冷やす処理
 	if (player.cooltime > 0) {
 		player.cooltime--;

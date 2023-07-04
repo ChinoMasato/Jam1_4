@@ -481,7 +481,9 @@ void updateEnemy()
 				if (isHit(bomb, enemy[i]))
 				{
 					//“–‚½‚Á‚Ä‚¢‚é
-					bomb.z = 1;//’e‚ð–³Œø
+					if (bomb.z == 0) {
+						bomb.z = 1;
+					}
 					enemy[i].hp--;
 				}
 			}
