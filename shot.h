@@ -4,6 +4,7 @@
 const int ShotNum = 100;
 extern En shot[ShotNum];//’e
 extern int shotimg;
+extern En bomb;
  
 
 void initShot();//’e‚Ì‰Šú‰»
