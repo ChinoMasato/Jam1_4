@@ -127,22 +127,31 @@ void updatePlayer()
 
 	if (CheckHitKey(KEY_INPUT_X) == 1 && bomb.cooltime == 0)
 	{
-		bomb.vx = 0.0;
-		bomb.vy = -5.0;
 		//撃てる弾をみつける
 		if (bomb.enable == false) {
 			//弾を撃つ
 			bomb.x = player.x + 1;
 			bomb.y = player.y - 50;
 			bomb.enable = true;
-			bomb.cooltime = 1000;//連射速度　小さいほど連射できる
+			bomb.cooltime = 100;//連射速度　小さいほど連射できる
 			PlaySoundMem(shotse, DX_PLAYTYPE_BACK);
 		}
 	}
-
+	if (bomb.z == 1) {
+		bomb.r=bomb.r+2;
+			bomb.vy = 0;
+	}
+	if (bomb.r == 30) {
+		bomb.z = 0;
+		bomb.vy = -1;
+		bomb.enable = false;
+	}
 	//銃を冷やす処理
 	if (player.cooltime > 0) {
 		player.cooltime--;
+	}
+	if (bomb.cooltime > 0) {
+		bomb.cooltime--;
 	}
 	player.star--;//無敵時間をカウントダウンさせる
 	countrey--;

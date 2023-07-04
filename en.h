@@ -34,6 +34,7 @@ struct En
 	int hp;
 	int shp;//Å‘åHP
 	int star;
+	int z;
 	std::map<int, MovePattern> pattern;
 
 };
