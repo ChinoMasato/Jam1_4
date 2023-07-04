@@ -11,11 +11,12 @@ int shotse;//ショットSE
 int lasershotse;//レーザー攻撃SE
 
 int playerimg;
+int countrey = 0;
 //プレイヤーの初期化
 void initPlayer()
 {
 	shotse = LoadSoundMem("ショット7.mp3");
-	lasershotse = LoadSoundMem("エネルギーを発射.mp3");
+	lasershotse = LoadSoundMem("エネルギーを発射2.mp3");
 
 	playerimg = LoadGraph("jiki.png");
 	player.x = 300;
@@ -25,6 +26,7 @@ void initPlayer()
 	player.fill = true;
 	player.cooltime = 0;
 	player.hp = 30;
+	
 }
 
 
@@ -116,12 +118,18 @@ void updatePlayer()
 				enemy[i].hp--;
 			}
 		}
+		if (countrey < 0) 
+		{
+			PlaySoundMem(lasershotse, DX_PLAYTYPE_BACK);
+			countrey = 70;
+		}
 	}
 	//銃を冷やす処理
 	if (player.cooltime > 0) {
 		player.cooltime--;
 	}
 	player.star--;//無敵時間をカウントダウンさせる
+	countrey--;
 }
 
 //プレイヤーの描画
