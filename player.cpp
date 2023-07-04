@@ -111,7 +111,7 @@ void updatePlayer()
 	if (CheckHitKey(KEY_INPUT_E) == 1) {
 		for (int i = 0; i < EnemyNum; i++) {
 
-			if (player.x - 200 < enemy[i].x + enemy[i].r && player.x + 200 > enemy[i].x - enemy[i].r && 0 < enemy[i].y + enemy[i].r && player.y - player.r > enemy[i].y - enemy[i].r)
+			if (player.x - 200 < enemy[i].x + enemy[i].r && player.x + 200 > enemy[i].x - enemy[i].r && player.y-player.r-800 < enemy[i].y + enemy[i].r && player.y - player.r > enemy[i].y - enemy[i].r)
 			{
 				enemy[i].hp--;
 			}
