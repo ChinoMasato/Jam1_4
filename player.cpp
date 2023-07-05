@@ -140,12 +140,12 @@ void updatePlayer()
 	if (bomb.z == 1) {
 		bomb.r = bomb.r + 2;
 		bomb.vy = 0;
-
-		if (bomb.r <= 30) {
+	}
+		if (bomb.r >= 30) {
 			bomb.z = 0;
 			bomb.vy = -1;
 			bomb.enable = false;
-		}
+		
 	}
 	//e‚ð—â‚â‚·ˆ—
 	if (player.cooltime > 0) {
